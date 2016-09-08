@@ -1,83 +1,32 @@
 $(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
-	$(".toggle-mnu").click(function() {
-		$(this).toggleClass("on");
-		$(".main-mnu").slideToggle();
-	});
-	var owl = $(".owl-carousel.clients");
-	owl.owlCarousel({
-		stagePadding: 0,
-		margin: 0,
-		loop: true,
-		items: 6,
-		dots: false,
-		nav: false,
-
-		responsive: {
-			0: {
-				items: 2
-			},
-			480: {
-				items: 3
-			},
-			768: {
-				items: 4
-			},
-			992: {
-				items: 6
-			}
-		}
-	});
-	$(".next").click(function(){
-		owl.trigger("next.owl.carousel");
-	});
-
 	$(".owl-carousel").owlCarousel({
-		stagePadding: 80,
+		stagePadding: 10,
 		loop: true,
-		dots: true,
-
-		responsive: {
-			0: {
-				items: 1,
-				stagePadding: 0,
-			},
-			480: {
-				items: 2,
-				stagePadding: 0
-			},
-			768: {
-				items: 2
-			},
-			992: {
-				items: 3
-			}
-
-		}
+		margin: 10,
+		responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+     }
 	});
-
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
+	$("body").on('click', '[href*="#"]', function(e){
+		var fixed_offset = 0;
+		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+		e.preventDefault();
+	});
+	
+	// toggle-mnu
+	$(".toggle-mnu").click(function() {
+	  $(this).toggleClass("on");
+	  $(".top-mnu").slideToggle();
+	  return false;
 	});
 
 });
