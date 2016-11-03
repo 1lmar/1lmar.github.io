@@ -2,7 +2,7 @@ $(function() {
 
     $("body").addClass("js");
   
-    $(".link-mnu").click(
+    $(".left-link-mnu").click(
       function(){
         $("body").toggleClass("show-menu");
       }
