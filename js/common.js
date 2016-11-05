@@ -35,5 +35,12 @@ $(function() {
 			}
 		);
 
+		//sign up
+	$(".tab-item").not(":first-child").hide();
+	$(".reg-container .tab").click(function() {
+		$(".reg-container .tab").removeClass("reg-active").eq($(this).index()).addClass("reg-active");
+		$(".tab-item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("reg-active");
+
 
 });
