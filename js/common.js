@@ -42,4 +42,10 @@ $(function() {
 		$(".tab-item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("reg-active");
 
+	$("#reg-tel-input").intlTelInput({
+		defaultCountry: "ru",
+		preferredCountries: [ "ru", "us" ],
+		nationalMode: false,
+	});
+
 });
