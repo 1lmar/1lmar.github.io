@@ -42,21 +42,4 @@ $(function() {
 		$(".tab-item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("reg-active");
 
-	 var recaptcha1;
-      var recaptcha2;
-      var myCallBack = function() {
-        //Render the recaptcha1 on the element with ID "recaptcha1"
-        recaptcha1 = grecaptcha.render('recaptcha1', {
-          'sitekey' : '6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7', //Replace this with your Site key
-          'theme' : 'light'
-        });
-        
-        //Render the recaptcha2 on the element with ID "recaptcha2"
-        recaptcha2 = grecaptcha.render('recaptcha2', {
-          'sitekey' : '6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7', //Replace this with your Site key
-          'theme' : 'dark'
-        });
-      };
-
-
 });

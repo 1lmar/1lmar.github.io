@@ -56,9 +56,6 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
-
 </head>
 
 <body class="reg-form-bg">
@@ -103,7 +100,7 @@
 									<span class="reg-line"></span>
 								</div>
 								<div class="captcha">
-									<div class="g-recaptcha" data-sitekey="6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7"></div>
+									<div id="recaptcha1"></div>
 								</div>
 							</div>
 							<div class="down-text">
@@ -124,7 +121,7 @@
 									<span class="reg-line"></span>
 								</div>
 								<div class="captcha">
-									<div id="recaptcha1"></div>
+									<div id="recaptcha2"></div>
 								</div>
 							</div>
 							<div class="down-text">
@@ -139,7 +136,7 @@
 							<!-- <h2>Регистрация в один клик</h2> -->
 							<div class="input-section">
 								<div class="captcha">
-									<div id="recaptcha2"></div>
+									<div id="recaptcha1"></div>
 								</div>
 							</div>
 							<div class="down-text">
@@ -188,7 +185,7 @@
 									<span>Выберите валюту</span>
 								</div>
 								<div class="captcha">
-									<div class="g-recaptcha" data-sitekey="6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7"></div>
+									<div id="recaptcha2"></div>
 								</div>
 								<div class="down-text">
 									<p>Нажимая кнопку, вы соглашаетесь с <a href="#">правилами</a> компании и подтверждаете, что законами Вашей страны не запрещён online betting.</p>
@@ -222,6 +219,26 @@
 		</div>
 	</div>
 
+	<!-- recaptcha start -->
+	<script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
+	
+	<script>
+			var recaptcha1;
+			var recaptcha2;
+			var myCallBack = function() {
+		//Render the recaptcha1 on the element with ID "recaptcha1"
+				recaptcha1 = grecaptcha.render('recaptcha1', {
+					'sitekey' : '6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7',
+					'theme' : 'light'
+				});
+		//Render the recaptcha2 on the element with ID "recaptcha2"
+		recaptcha2 = grecaptcha.render('recaptcha2', {
+					'sitekey' : '6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7',
+					'theme' : 'light'
+				});
+			};
+	</script>
+	<!-- recaptcha end -->
 
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
