@@ -42,5 +42,13 @@ $(function() {
 		$(".tab-item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("reg-active");
 
+	var ptro_rw = document.getElementById('recaptcha_widget'); 
+								var padre = ptro_rw.parentNode; 
+								var div_recaptcha = padre.firstChild; 
+								var id_nuevo_div = 'recaptcha_'+ formActual; 
+								var nuevo_div = document.getElementById(id_nuevo_div); 
+								nuevo_div.appendChild(div_recaptcha); 
+								Recaptcha.reload(); 
+
 
 });
