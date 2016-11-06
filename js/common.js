@@ -47,5 +47,10 @@ $(function() {
 		preferredCountries: [ "ru", "us" ],
 		nationalMode: false,
 	});
+	$("#reg-tel-full").intlTelInput({
+		defaultCountry: "ru",
+		preferredCountries: [ "ru", "us" ],
+		nationalMode: false,
+	});
 
 });
