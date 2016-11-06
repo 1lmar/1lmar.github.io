@@ -10,6 +10,12 @@ $(function() {
 			autoplayTimeout:3500,
 			autoplayHoverPause:true
 		})
+		$(".cab-top-mnu ul").owlCarousel({
+			// center: true,
+			items: 3,
+			nav: true,
+			navText : ""
+		})
 		
 		//show left menu
 		$(".left-link-mnu").click(
@@ -41,6 +47,13 @@ $(function() {
 		$(".reg-container .tab").removeClass("reg-active").eq($(this).index()).addClass("reg-active");
 		$(".tab-item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("reg-active");
+
+		//cabinet-tabs
+	$(".cab-item").not(":first-child").hide();
+	$(".cab-container .owl-item").click(function() {
+		$(".cab-container .owl-item").removeClass("cab-active").eq($(this).index()).addClass("cab-active");
+		$(".cab-item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("cab-active");
 
 	$("#reg-tel-input").intlTelInput({
 		defaultCountry: "ru",
