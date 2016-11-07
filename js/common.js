@@ -14,7 +14,18 @@ $(function() {
 			// center: true,
 			items: 3,
 			nav: true,
-			navText : ""
+			navText : "",
+			responsive : {
+				0 : {
+					items: 3,
+				},
+				480 : {
+					items: 4,
+				},
+				768 : {
+					items: 5,
+				}
+			}
 		})
 		
 		//show left menu
