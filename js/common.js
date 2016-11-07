@@ -27,6 +27,18 @@ $(function() {
         }
       }
     })
+    $(".cab-top-submnu ul").owlCarousel({
+      // center: true,
+      items: 4,
+      responsive : {
+        0 : {
+          items: 4,
+        },
+        480 : {
+          items: 6,
+        }
+      }
+    })
     
     //show left menu
     $(".left-link-mnu").click(
@@ -61,10 +73,16 @@ $(function() {
 
     //cabinet-tabs
   $(".cab-item").not(":first-child").hide();
-  $(".cab-container .owl-item").click(function() {
-    $(".cab-container .owl-item").removeClass("cab-active").eq($(this).index()).addClass("cab-active");
+  $(".cab-top-mnu .owl-item").click(function() {
+    $(".cab-top-mnu .owl-item").removeClass("cab-active").eq($(this).index()).addClass("cab-active");
     $(".cab-item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("cab-active");
+    //bank-tabs
+  $(".submnu-item").not(":first-child").hide();
+  $(".cab-top-submnu .owl-item").click(function() {
+    $(".cab-top-submnu .owl-item").removeClass("submnu-active").eq($(this).index()).addClass("submnu-active");
+    $(".submnu-item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("submnu-active");
 
   $("#reg-tel-input").intlTelInput({
     defaultCountry: "ru",
