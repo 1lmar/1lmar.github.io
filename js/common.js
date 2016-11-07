@@ -9,7 +9,7 @@ $(function() {
       autoplay:true,
       autoplayTimeout:3500,
       autoplayHoverPause:true
-    })
+    });
     $(".cab-top-mnu ul").owlCarousel({
       // center: true,
       items: 3,
@@ -26,9 +26,8 @@ $(function() {
           items: 5,
         }
       }
-    })
+    });
     $(".cab-top-submnu ul").owlCarousel({
-      // center: true,
       items: 4,
       responsive : {
         0 : {
@@ -38,7 +37,18 @@ $(function() {
           items: 6,
         }
       }
-    })
+    });
+    $(".cab-fill-submnu ul").owlCarousel({
+      items: 4,
+      responsive : {
+        0 : {
+          items: 4,
+        },
+        480 : {
+          items: 6,
+        }
+      }
+    });
     
     //show left menu
     $(".left-link-mnu").click(
@@ -77,12 +87,18 @@ $(function() {
     $(".cab-top-mnu .owl-item").removeClass("cab-active").eq($(this).index()).addClass("cab-active");
     $(".cab-item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("cab-active");
-    //bank-tabs
+    //withdraw-tabs
   $(".submnu-item").not(":first-child").hide();
   $(".cab-top-submnu .owl-item").click(function() {
     $(".cab-top-submnu .owl-item").removeClass("submnu-active").eq($(this).index()).addClass("submnu-active");
     $(".submnu-item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("submnu-active");
+    //fill-tabs
+  $(".fill-item").not(":first-child").hide();
+  $(".cab-fill-submnu .owl-item").click(function() {
+    $(".cab-fill-submnu .owl-item").removeClass("fill-active").eq($(this).index()).addClass("fill-active");
+    $(".fill-item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("fill-active");
 
   $("#reg-tel-input").intlTelInput({
     defaultCountry: "ru",
