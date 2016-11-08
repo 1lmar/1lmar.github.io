@@ -2,6 +2,12 @@ $(function() {
 
     $("body").addClass("mobile-mnu");
 
+    $(".log-item").magnificPopup({
+      type:'inline',
+      midClick: true,
+      mainClass: 'mfp-fade'
+    });
+
     $(".slider-wrap").owlCarousel({
       loop: true,
       items: 1,
