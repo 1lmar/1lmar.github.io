@@ -16,6 +16,23 @@ $(function() {
       autoplayTimeout:3500,
       autoplayHoverPause:true
     });
+    $(".slots-slider-wrap").owlCarousel({
+      loop: true,
+      items: 1,
+      dots: true,
+      autoplay:true,
+      autoplayTimeout:3500,
+      autoplayHoverPause:true
+    });
+    $(".slots-top-mnu ul").owlCarousel({
+      nav: true,
+      navText : "",
+      responsive : {
+        0 : {
+          items: 5,
+        }
+      }
+    });
     $(".cab-top-mnu ul").owlCarousel({
       // center: true,
       items: 3,
