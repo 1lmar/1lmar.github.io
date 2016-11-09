@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Регистрация</title>
+	<title>css</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,33 +64,35 @@
 					<a href="/" class="back-link"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 					<h3>Регистрация</h3>
 				</div>
-				<nav class="reg-top-mnu">
-					<ul class="clearfix">
-						<li class="tab"><span><i class="fa fa-comment-o" aria-hidden="true"></i> <p>по Тел.</p></span></li>
-						<li class="tab"><span><i class="fa fa-envelope-o" aria-hidden="true"></i> <p>по Email</p></span></li>
-						<li class="tab"><span><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>в 1 клик</p></span></li>
-						<li class="tab"><span><i class="fa fa-list-alt" aria-hidden="true"></i> <p>Полная</p></span></li>
-						<li class="tab"><span><i class="fa fa-user" aria-hidden="true"></i> <p>social</p></span></li>
-					</ul>
-				</nav>
-				<div class="reg-content-wrap clearfix">
-					<div class="tab-item">
+				<div class="reg-content-wrap reg-top-mnu clearfix">
+					<input id="tab1" type="radio" name="tabs" checked>
+					<label for="tab1" title="Вкладка 1">
+						<span><i class="fa fa-comment-o" aria-hidden="true"></i> <p>по Тел.</p></span>
+					</label>
+
+					<input id="tab2" type="radio" name="tabs">
+					<label for="tab2" title="Вкладка 2">
+						<span><i class="fa fa-envelope-o" aria-hidden="true"></i> <p>по Email</p></span>
+					</label>
+
+					<input id="tab3" type="radio" name="tabs">
+					<label for="tab3" title="Вкладка 3">
+						<span><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>в 1 клик</p></span>
+					</label>
+
+					<input id="tab4" type="radio" name="tabs">
+					<label for="tab4" title="Вкладка 4">
+						<span><i class="fa fa-list-alt" aria-hidden="true"></i> <p>Полная</p></span>
+					</label>
+
+					<input id="tab5" type="radio" name="tabs">
+					<label for="tab5" title="Вкладка 5">
+						<span><i class="fa fa-user" aria-hidden="true"></i> <p>social</p></span>
+					</label>
+
+					<div class="tab-item tab-item-1">
 						<form class="reg-main-form">
-							<!-- <h2>Регистрация по Вашему телефону</h2>
-							<div class="input-section input-number">
-								<div class="label-container"><label>Номер телефона</label></div>
-								<input type="number" placeholder="Введите номер телефона" required>
-							</div>
-							<div class="input-container captcha">
-								<img src="img/captcha.PNG" alt="">
-							</div>
-							<div class="input-container down-text">
-								<p>Нажимая кнопку, вы соглашаетесь с <a href="#">правилами</a> компании и подтверждаете, что законами Вашей страны не запрещён online betting.</p>
-								<p><img src="img/18+2.png" alt="">Для регистрации на сайте Ваш возраст должен превышать 18 лет.</p>
-								<input type="submit" class="button" value="зарегистрироваться">
-							</div> -->
 							<div class="input-section">
-								<!-- <div class="label-container"><label>Электронная почта (Логин)</label></div> -->
 								<div class="group">
 									<input type="tel" id="reg-tel-input" placeholder="+7" required>
 									<label class="select-label">Phone</label>
@@ -107,11 +109,9 @@
 							</div>
 						</form>
 					</div>
-					<div class="tab-item">
+					<div class="tab-item tab-item-2">
 						<form class="reg-main-form">
-							<!-- <h2>Регистрация по Вашему Email</h2> -->
 							<div class="input-section">
-								<!-- <div class="label-container"><label>Электронная почта (Логин)</label></div> -->
 								<div class="group">
 									<input type="email" placeholder="Введите вашу почту" required>
 									<label>Email</label>
@@ -128,7 +128,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="tab-item">
+					<div class="tab-item tab-item-3">
 						<form class="reg-main-form">
 							<!-- <h2>Регистрация в один клик</h2> -->
 							<div class="input-section">
@@ -142,7 +142,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="tab-item">
+					<div class="tab-item tab-item-4">
 						<form class="reg-main-form">
 							<!-- <h2>Полная регистрация</h2> -->
 							<div class="input-section full-reg">
@@ -192,7 +192,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="tab-item">
+					<div class="tab-item tab-item-5">
 						<form class="reg-main-form">
 							<h2>Быстрая регистрация через сервисы</h2>
 							<div class="reg-social-wrap">
