@@ -68,6 +68,8 @@ $(function() {
       }
     });
     $(".cab-top-submnu ul").owlCarousel({
+      nav: true,
+      navText: "",
       items: 4,
       responsive : {
         0 : {
@@ -80,6 +82,8 @@ $(function() {
     });
     $(".cab-fill-submnu ul").owlCarousel({
       items: 4,
+      nav: true,
+      navText: "",
       responsive : {
         0 : {
           items: 4,
