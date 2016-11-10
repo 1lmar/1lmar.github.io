@@ -180,20 +180,19 @@ $(function() {
     }
   });
 
-  document.getElementById("sort-history").onchange = sortHistory;
-  function sortHistory(){
-  var sortHistory = $('#sort-history').val();
+  document.getElementById("sort-history").onchange = function sortHistory(){
+    var sortHistory = $('#sort-history').val();
 
-  if(sortHistory == "Все"){
-    $('tr[name="Пополнение"]').show();
-    $('tr[name="Вывод"]').show();
-  } else if(sortHistory == "Пополнение"){
-    $('tr[name="Пополнение"]').show();
-    $('tr[name="Вывод"]').hide();
-  } else if(sortHistory == "Вывод"){
-    $('tr[name="Вывод"]').show();
-    $('tr[name="Пополнение"]').hide();
+    if(sortHistory == "Все"){
+      $('tr[name="Пополнение"]').show();
+      $('tr[name="Вывод"]').show();
+    } else if(sortHistory == "Пополнение"){
+      $('tr[name="Пополнение"]').show();
+      $('tr[name="Вывод"]').hide();
+    } else if(sortHistory == "Вывод"){
+      $('tr[name="Вывод"]').show();
+      $('tr[name="Пополнение"]').hide();
+    }
   }
-}
 
 });
