@@ -139,7 +139,7 @@ $(function() {
   $(".cab-item").not(":first-child").hide();
   $(".cab-top-mnu .owl-item").click(function() {
     $(".cab-top-mnu .owl-item").removeClass("cab-active").eq($(this).index()).addClass("cab-active");
-    $(".cab-item").hide().eq($(this).index()).fadeIn()
+    $(".cab-item").hide().eq($(this).index()).fadeIn().addClass("active-item")
   }).eq(0).addClass("cab-active");
     //withdraw-tabs
   $(".submnu-item").not(":first-child").hide();
