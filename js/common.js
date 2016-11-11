@@ -74,9 +74,16 @@ function loadTab(tabObj){
     $(".slots-top-mnu ul").owlCarousel({
       nav: true,
       navText : "",
+      margin: 10,
       responsive : {
         0 : {
           items: 5,
+        },
+        480 : {
+          items: 7,
+        },
+        768 : {
+          items: 8,
         }
       }
     });
