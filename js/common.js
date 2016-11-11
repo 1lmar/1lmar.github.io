@@ -1,5 +1,34 @@
 $(function() {
 
+    var containerId = '#tabs-container';
+var tabsId = '#tabs';
+
+    // Preload tab on page load
+    if($(tabsId + ' LI.current A').length > 0){
+        loadTab($(tabsId + ' LI.current A'));
+    }
+    
+    $(tabsId + ' A').click(function(){
+        if($(this).parent().hasClass('current')){ return false; }
+        
+        $(tabsId + ' LI.current').removeClass('current');
+        $(this).parent().addClass('current');
+        
+        loadTab($(this));        
+        return false;
+    });
+
+function loadTab(tabObj){
+    if(!tabObj || !tabObj.length){ return; }
+    $(containerId).addClass('loading');
+    $(containerId).fadeOut('fast');
+    
+    $(containerId).load(tabObj.attr('href'), function(){
+        $(containerId).removeClass('loading');
+        $(containerId).fadeIn('fast');
+    });
+}
+
     $("body").addClass("mobile-mnu");
 
     // $(".tabs-nav .owl-item").click(function(e) {
@@ -19,10 +48,11 @@ $(function() {
     //   e.preventDefault();
     // });
 
-    $(".log-item").magnificPopup({
+    $(".log-item, .game").magnificPopup({
       type:'inline',
       midClick: true,
-      mainClass: 'mfp-fade'
+      mainClass: 'my-mfp-zoom-in',
+      removalDelay: 300,
     });
 
     $(".slider-wrap").owlCarousel({

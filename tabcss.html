@@ -57,192 +57,61 @@
 
 <body class="reg-form-bg">
 
-	<style>
-		.tabs {
-    width:100%;
-    max-width: 720px;
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0;
-}
-.tabs-nav {
-    overflow: hidden;
-    padding-left:14px;
-    padding-right: 14px;
-}
-.tabs-nav li {
-    color: #555;
-    padding: 5px 14px 3px;
-    position: relative;
-    text-decoration: none;
-    background-color: #e4e4e4;
-    border-top:1px solid #ccc;
-    border-radius:6px;
-    float: left;
-    display: block;
-    cursor:pointer; 
-    margin-right:8px;
-    font-family: 'Roboto',Helvetica,sans-serif;
-    font-size: 14px;
-    text-transform:none;
-}
- 
-.tabs-nav li:before, .tabs-nav li:after {
-    display:block; 
-    content:" "; 
-    position:absolute;  
-    top:0; 
-    height:100%; 
-    width:16px; 	
-    background-color: #e4e4e4;
-}
-.tabs-nav li:before {
-    right:-4px;
-    transform: skew(25deg, 0deg) ;
-    -webkit-transform: skew(25deg, 0deg) ;
-    -moz-transform: skew(25deg, 0deg) ;
-    -o-transform: skew(25deg, 0deg) ;
-    -ms-transform: skew(25deg, 0deg) ;
-    border-radius:0 4px 0 0;
-    border-right:1px solid #ccc;
-    box-shadow:rgba(0,0,0,.1)3px 2px 5px, inset rgba(255,255,255,.09)-1px 0;
-    z-index: 2
-}
-.tabs-nav li:after {
-    left:-4px;
-    transform: skew(-25deg, 0deg) ;
-    -webkit-transform: skew(-25deg, 0deg) ;
-    -moz-transform: skew(-25deg, 0deg) ;
-    -o-transform: skew(-25deg, 0deg) ;
-    -ms-transform: skew(-25deg, 0deg) ;
-    border-left:1px solid #ccc;
-    border-radius:4px 0 0 0;
-}
- 
-.tabs-nav li:hover, .tabs-nav li:hover:before, .tabs-nav li:hover:after {
-    background-color:#e9e9e9;
-}
-.tabs li.active, 
-.tabs li.active:before, 
-.tabs li.active:after, 
-.tabs li.active:hover, 
-.tabs li.active:hover:before, 
-.tabs li.active:hover:after { 
-    background-color:#f4f4f4; color:#555;
-}
-.tabs li.active {
-    z-index:3;
-}
-.tabs-box > div {
-    display: none;
-    padding: 10px 15px;
-    background: rgba(255,255,255,0.9);
-    border:1px solid #ccc;
-    box-sizing: border-box;
-    -webkit-animation: fade 0.5s linear;
-    -ms-animation: fade 0.5s linear;
-    animation: fade 0.5s linear;
-}
-.tabs-box > .active {
-    display: block;
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-	</style>
-
-	<div class="tabs">
-    <ul class="tabs-nav">
-        <li class="active">Вкладка 1</li>
-        <li>Вкладка 2</li>
-        <li>Вкладка 3</li>
-    </ul>
-    <div class="tabs-box">
-        <div class="active">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique soluta voluptatibus atque magni error possimus cupiditate neque nihil accusantium, tempore quaerat? Quibusdam ad quis eveniet blanditiis delectus cum officiis, reiciendis asperiores aspernatur animi! Porro doloremque culpa ad animi veniam tempora nesciunt illum, quas, modi suscipit? Consequatur non est voluptatem mollitia.
-            </p>
+	<div id="page">
+    
+        <h1>jQuery AJAX вкладки</h1>
+    
+        <ul class="mytabs" id="tabs">
+            <li class="current"><a href="tabs/tab-1.html">Вкладка 1</a></li>
+            <li><a href="tabs/tab-2.html">Вкладка 2</a></li>
+            <li><a href="tabs/tab-3.html">Вкладка 3</a></li>
+        </ul>
+        
+        <div class="mytabs-container" id="tabs-container">
+            Загрузка. Пожалуйста подождите...
         </div>
-        <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste enim pariatur harum tempore distinctio dicta asperiores reiciendis maiores, deserunt, placeat! Magni minima quo aperiam esse similique, aliquam rem dignissimos dolores! Vel quas ut deserunt quae quod ad, ipsum laudantium esse labore repellendus perferendis expedita nihil nemo voluptas illum est eum fuga numquam odit cum excepturi fugiat nam sapiente sit dignissimos. Numquam dolores facilis temporibus facere accusamus mollitia atque dicta dolor nam, delectus quo a ratione assumenda ut praesentium ullam reiciendis expedita ex hic, sapiente unde voluptas similique sunt. Aspernatur tempora sit eaque reprehenderit, qui, ullam tenetur doloremque, facere nesciunt consectetur voluptatum similique neque in odit adipisci, ea officia vero porro debitis quo. Rem voluptas, autem dolor neque similique fugit reprehenderit praesentium nostrum qui tenetur. Eveniet, laudantium voluptate reprehenderit, optio deleniti autem velit ipsam molestias adipisci iure earum ea similique nobis nam enim sed fuga veritatis voluptates laboriosam nesciunt cumque maxime praesentium ipsa! Corporis quas ratione assumenda vel reiciendis aliquam nesciunt suscipit repellat in pariatur exercitationem, at architecto quasi! Animi, ut dolorem quis vitae sunt commodi libero odio perspiciatis nostrum nobis saepe ex illo veritatis. Dolorum quo eius facere qui dignissimos nobis minima, ratione, tempore, id quis sit esse, voluptatum amet. Assumenda illum ut iure sunt eos, sint delectus, non quos nam minima nesciunt iste architecto commodi tempore accusamus repudiandae inventore fugit. Aspernatur odio sunt adipisci, accusamus laborum voluptatum quod fuga neque ad nisi possimus quos cumque sint expedita, pariatur laboriosam nesciunt. Recusandae praesentium nostrum fugiat omnis ipsum facere vel doloribus nulla adipisci magni. Doloribus maxime nihil, facilis nemo explicabo commodi modi tempora eveniet dolor! Amet soluta sed deleniti voluptas? Corporis unde molestiae, eos necessitatibus consectetur, fugit velit, culpa explicabo porro doloribus odio laboriosam aliquam suscipit rem tempora enim. Alias necessitatibus voluptatum vel culpa minus molestiae impedit, eius voluptatibus reiciendis suscipit aperiam soluta dolor vero magni architecto veritatis, optio quisquam sint neque expedita enim! Sapiente repellat, cum nesciunt dolorem doloremque porro eaque, hic quas asperiores eius fugit doloribus, nam est commodi illo autem soluta quibusdam explicabo. Ea facere atque voluptas, esse magni cupiditate voluptates laboriosam alias animi deserunt quidem quaerat quibusdam fuga delectus cumque quas reiciendis blanditiis ipsam optio similique facilis reprehenderit. Quas nobis eos quasi aut asperiores ad nihil quibusdam dolorum adipisci alias quos accusamus facere, odit, beatae natus animi amet ab! Tempore distinctio tempora culpa, excepturi cum, veniam earum perferendis alias architecto nam pariatur voluptatum quis nulla corrupti suscipit recusandae est fuga expedita unde. Fugit nesciunt aut dignissimos totam illum ex repellendus dolor quae vel ratione odit explicabo vero autem voluptas rerum qui quisquam, id ad. Soluta et nemo, architecto animi voluptas similique vero labore reprehenderit sequi id dolorem numquam fugiat! Rem accusantium dolor esse incidunt quibusdam, amet placeat debitis, ad eius enim iste quaerat perferendis, aliquid obcaecati numquam quam totam. Tempore ad ducimus quod, laborum dolor reiciendis magni nulla ipsa nemo! Illo deleniti animi quidem numquam omnis excepturi, ea provident similique quas maiores. Neque, nesciunt ipsam reiciendis aperiam distinctio placeat perferendis repudiandae, cum modi quidem alias quis.
-            </p>
-        </div>
-        <div>
-            <div class="tabs">
-                <ul class="tabs-nav">
-                  <li class="active">Вкладка 1</li>
-                  <li>Вкладка 2</li>
-                  <li>Вкладка 3</li>
-                </ul>
-                <div class="tabs-box">
-                    <div class="active">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ea dolore eos accusamus ipsam ipsum voluptatum, dolorem dolor quidem error temporibus at minima vel facere obcaecati dolores voluptatibus quas, harum illum possimus! At aliquid voluptas voluptatibus ullam. Dolorem, deleniti repellendus in dolorum rem mollitia eligendi amet odio pariatur minima. Praesentium ea eaque a enim, illum quas. Dolor magni aut sunt atque ad, delectus numquam non eligendi sint obcaecati laborum quidem dolorem quam nulla distinctio natus aperiam, voluptatum voluptate explicabo nam minus porro temporibus facilis. Cupiditate eligendi reprehenderit maxime laudantium veniam a necessitatibus illo ullam facere enim nisi odio dolorem, harum aut quas at est inventore distinctio autem ea recusandae! Odio iste impedit aliquam quasi alias fugit blanditiis est laborum commodi quibusdam a tempora cupiditate molestiae, repudiandae ab, voluptatum necessitatibus sit temporibus ullam earum distinctio numquam laboriosam. Qui tempora rem amet porro, ratione recusandae iste velit illum sequi repellat hic dolores iusto ad odit saepe necessitatibus dolore deserunt, aperiam quo fugiat doloremque molestias, quidem. Minus officia nihil laborum dolorum nesciunt aut ducimus autem voluptatum nulla corrupti soluta blanditiis et similique qui illo eum tenetur, saepe exercitationem ut dolor dicta. Nesciunt mollitia consequatur aperiam quis nulla totam blanditiis, at, asperiores harum iste omnis sequi porro, consectetur accusantium quia facilis eum tempore veniam inventore dolor, veritatis laborum ducimus nostrum nam? Iure, earum, assumenda? Aspernatur nam exercitationem dolorum modi labore minus eum aliquam cumque dolore accusamus, consequatur, voluptatibus, veniam impedit possimus sint autem quasi quos molestias quaerat, saepe fugiat quidem iusto ea. Atque laboriosam assumenda odit ab saepe eligendi, beatae hic, amet delectus animi commodi iste est. Vitae quae, hic repudiandae voluptate quos iste iure deserunt, cumque illum. Itaque praesentium provident voluptate non reprehenderit odit sapiente maiores illo optio dolorum nemo architecto laudantium corporis incidunt sit, aspernatur culpa officiis! Dolores sequi quia obcaecati expedita alias perferendis voluptate nesciunt possimus voluptatem necessitatibus. Sint aliquid pariatur, nemo voluptas iure, expedita, placeat enim corrupti dolor, molestias doloremque. Fugiat cupiditate vitae dicta facilis eveniet! Quam saepe, dolorum, architecto quo distinctio magnam odit odio illo, ducimus facere beatae delectus ipsum laboriosam tempore corrupti eos repellendus excepturi maiores? Mollitia voluptates consequatur unde tempore nostrum perspiciatis ullam perferendis facilis adipisci dolores? Magnam eligendi voluptate explicabo consequatur, ex repellat aliquam obcaecati, totam incidunt commodi animi? Dolorum voluptatum vero vel aperiam fugiat corporis provident, commodi neque vitae maiores pariatur autem eaque expedita ducimus nam facere asperiores distinctio ullam esse non rem! Excepturi quas minus inventore vero quod optio, doloribus delectus, sint laboriosam eius, ullam dolores veniam. Natus labore illum esse facilis optio delectus, sit a, quibusdam sapiente sint voluptatem! Ad atque consequuntur in, itaque quod vel eligendi nesciunt at voluptatibus illum, fuga accusamus cumque nulla quae molestias ipsum rem reprehenderit repellendus sunt iusto totam nemo! Quaerat perferendis dolore error officia dignissimos ipsum, rerum dolor, magni velit ullam laboriosam eligendi culpa repellat ad explicabo excepturi architecto. Odit facilis beatae modi ut dolore cupiditate sint placeat, blanditiis ipsam accusantium veritatis, architecto eos quas. Impedit, accusantium! Unde aut libero nam iusto, dolorem sapiente, labore debitis voluptatum.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="tabs">
-                            <ul class="tabs-nav">
-                              <li class="active">Вкладка 1</li>
-                              <li>Вкладка 2</li>
-                              <li>Вкладка 3</li>
-                            </ul>
-                            <div class="tabs-box">
-                                <div class="active">
-                                    <p>
-                                      Здесь размещаете любой контент, текст, картинки или видео, а может и всё сразу...
-                                    </p>
-                                </div>
-                                <div>
-                                    <p>
-                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolorem dolores voluptates. Ipsam dolorum explicabo iusto vero inventore voluptatem voluptas aspernatur, debitis, culpa cupiditate eaque distinctio, atque veritatis ratione perferendis sunt neque ullam commodi dicta iure. Aspernatur officiis quia adipisci, maiores totam nam neque nisi asperiores iste temporibus facere ipsum commodi facilis obcaecati doloremque veniam consectetur ut iusto officia voluptatum iure nostrum, cupiditate nesciunt, doloribus delectus. Est veniam, officiis eos quae eum alias nobis repellendus, sunt commodi sed iusto ratione minus culpa animi. Quibusdam sint at quae unde nobis animi optio tempora repudiandae obcaecati non ad natus voluptatibus vel, voluptatem assumenda esse aliquam ducimus in culpa ipsum, expedita, illum eos. Nemo enim excepturi repellat voluptates eveniet, aspernatur rem culpa soluta ex illo quo magnam voluptas accusamus repudiandae voluptatibus quas porro cumque! Veniam repudiandae facere perspiciatis repellat inventore est deserunt porro omnis voluptatum tempore optio ab quasi laboriosam aliquam harum blanditiis labore suscipit adipisci, maxime facilis. Quasi a, provident neque, dolores eveniet excepturi harum eaque, molestias molestiae quos aspernatur tempore maxime odit explicabo inventore quae. Dolore reiciendis ducimus deserunt hic ipsa doloribus omnis illo maiores fugit repudiandae suscipit aut quibusdam debitis, laborum voluptas quasi consectetur quidem, vel, dolorem tempora fuga. Tenetur ab obcaecati minima rerum doloribus distinctio iure. Corrupti praesentium facere, officia, eos libero explicabo unde iste odit optio ipsa molestias eligendi illo nostrum quis corporis asperiores aperiam quas velit reiciendis necessitatibus rerum sed est itaque fuga. Necessitatibus nobis harum, adipisci dolores quod laudantium enim. Blanditiis dolorum porro maiores ducimus atque? Quod deserunt, facere iusto obcaecati nihil aliquam expedita, harum temporibus modi officia labore alias, asperiores a maxime eaque doloribus mollitia non iure facilis placeat? Vero earum, aut. Ullam quasi rem, inventore earum optio perferendis recusandae ducimus voluptates totam! Quo quasi eos, dolores repellat dolorem totam dolorum aperiam eligendi eum. Asperiores aperiam magni ducimus reiciendis ratione. Dolor labore quae sapiente in ex! Tempora sunt voluptates, corrupti voluptatem, rem veniam, expedita quis magnam possimus nam iure molestias est. Excepturi accusantium asperiores nisi sed pariatur sit error nostrum ipsa doloribus iste quo, animi recusandae, perspiciatis porro omnis deleniti ratione eligendi beatae optio earum tempore. Inventore rem placeat quaerat. Illum odio ut excepturi dignissimos culpa aspernatur ducimus autem quae quas architecto eum corporis enim in nam cum iste molestias, ipsum similique voluptatibus natus. Iste tempora tempore, doloremque odit dolor, itaque magni possimus earum deserunt aliquam ipsam obcaecati hic optio facere. Error quisquam expedita adipisci tenetur fuga impedit distinctio voluptatum molestias sequi, numquam totam perferendis, molestiae, repellat magni. Tempore dolores vitae deserunt possimus fugiat unde magni quasi sunt adipisci veritatis voluptatum ex numquam est tenetur debitis qui, voluptates repellendus sit autem inventore ab itaque repudiandae perferendis magnam. Saepe esse harum temporibus hic cum non, fuga, quas, suscipit rem vitae libero maxime quae iure molestias eaque quos nulla quaerat doloremque recusandae debitis! Quidem et, nobis molestias nostrum inventore fugit officiis quod perferendis vero blanditiis culpa quis accusamus dolore ratione illum quam fuga omnis minima voluptas nam dicta assumenda! Nam sed tempore, ipsa omnis eaque voluptatibus, aut?
-                                    </p>
-                                </div>
-                                <div>
-                                    <p>
-                                      Здесь размещаете любой контент, текст, картинки или видео, а может и всё сразу...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>
-                          Здесь размещаете любой контент, текст, картинки или видео, а может и всё сразу...
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
-</div>
-
-	<!-- recaptcha start -->
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-	
-	<script type="text/javascript">
-		var onloadCallback = function() {
-			mysitekey = '6Lc6OAsUAAAAAL_4A6q0bBMry1cHoDK80nFFxSQ7';
-			grecaptcha.render('recaptcha1', {
-				'sitekey' : mysitekey
-			});
-			grecaptcha.render('recaptcha2', {
-				'sitekey' : mysitekey,
-			});
-			grecaptcha.render('recaptcha3', {
-				'sitekey' : mysitekey,
-			});
-			grecaptcha.render('recaptcha4', {
-				'sitekey' : mysitekey,
-			});
-		};
-	</script>
-	<!-- recaptcha end -->
+    <style>
+        UL.mytabs {
+    position: relative;
+    z-index: 2;
+}
+UL.mytabs, UL.mytabs LI {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+UL.mytabs LI { padding: 0 5px; }
+UL.mytabs LI A {
+    float: left;
+    padding: 7px;
+    border: 1px solid #CCCCCC;
+    border-bottom: 1px solid #E0E0E0;
+    background: #F0F0F0;
+    text-decoration: none;
+    color: #333333;
+    height: 22px;
+}
+UL.mytabs LI A:HOVER, UL.mytabs LI.current A {
+    background: #FFFFFF;    
+}
+UL.mytabs LI.current A {
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #FFFFFF;
+}
+.mytabs-container {
+    position: relative;
+    z-index: 1;
+    clear: both;
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    top: -1px;
+    background:#fff;
+}
+    </style>
 
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
