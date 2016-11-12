@@ -56,63 +56,30 @@
 </head>
 
 <body class="reg-form-bg">
-
-	<div id="page">
-    
-        <h1>jQuery AJAX вкладки</h1>
-    
-        <ul class="mytabs" id="tabs">
-            <li class="current"><a href="tabs/tab-1.html">Вкладка 1</a></li>
-            <li><a href="tabs/tab-2.html">Вкладка 2</a></li>
-            <li><a href="tabs/tab-3.html">Вкладка 3</a></li>
-        </ul>
-        
-        <div class="mytabs-container" id="tabs-container">
-            Загрузка. Пожалуйста подождите...
-        </div>
-        
-    </div>
-    <style>
-        UL.mytabs {
-    position: relative;
-    z-index: 2;
-}
-UL.mytabs, UL.mytabs LI {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    float: left;
-}
-UL.mytabs LI { padding: 0 5px; }
-UL.mytabs LI A {
-    float: left;
-    padding: 7px;
-    border: 1px solid #CCCCCC;
-    border-bottom: 1px solid #E0E0E0;
-    background: #F0F0F0;
-    text-decoration: none;
-    color: #333333;
-    height: 22px;
-}
-UL.mytabs LI A:HOVER, UL.mytabs LI.current A {
-    background: #FFFFFF;    
-}
-UL.mytabs LI.current A {
-    font-weight: bold;
-    font-size: 14px;
-    border-bottom: 1px solid #FFFFFF;
-}
-.mytabs-container {
-    position: relative;
-    z-index: 1;
-    clear: both;
-    border: 1px solid #E0E0E0;
-    padding: 10px;
-    top: -1px;
-    background:#fff;
-}
-    </style>
-
+   <div class="cab-container">
+		<div class="cab-wrap">
+			<div class="cab-main-content" id="page">
+				<div class="cab-top-panel">
+					<a href="/" class="home-link">home</a>
+					<h3>Profile</h3>
+					<a href="#" class="log-out">log-out</a>
+				</div>
+				<nav class="cab-top-mnu">
+					<ul id="tabs">
+						<li class="cab current"><a href="tab-1.html"><i class="fa fa-comment-o" aria-hidden="true"></i><p>Профиль</p></a></li>
+						<li class="cab"><a href="tab-2.html"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Баланс счета</p></a></li>
+						<li class="cab"><a href="tab-3.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
+						<li class="cab"><i class="fa fa-list-alt" aria-hidden="true"></i><p>Вывод средств</p></li>
+						<li class="cab"><i class="fa fa-user" aria-hidden="true"></i><p>История платежей</p></li>
+						<li class="cab"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Бонусы</p></li>
+					</ul>
+				</nav>
+				<div class="cab-content-wrap" id="tabs-container">
+					loading...
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},

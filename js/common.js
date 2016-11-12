@@ -194,6 +194,12 @@ function loadTab(tabObj){
     $(".cab-fill-submnu .owl-item").removeClass("fill-active").eq($(this).index()).addClass("fill-active");
     $(".fill-item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("fill-active");
+    //slots-tabs
+  $(".slot-item").not(":first-child").hide();
+  $(".slots-nav-row .owl-item").click(function() {
+    $(".slots-nav-row .owl-item").removeClass("slot-active").eq($(this).index()).addClass("slot-active");
+    $(".slot-item").hide().eq($(this).index()).fadeIn().addClass("slot-active")
+  }).eq(0).addClass("slot-active");
 
   $("#reg-tel-input").intlTelInput({
     defaultCountry: "ru",
