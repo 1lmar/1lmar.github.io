@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>css</title>
+	<title>Cabinet</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,30 +56,282 @@
 </head>
 
 <body class="reg-form-bg">
-   <div class="cab-container">
+
+	<div class="cab-container">
 		<div class="cab-wrap">
-			<div class="cab-main-content" id="page">
+			<div class="cab-main-content">
 				<div class="cab-top-panel">
 					<a href="/" class="home-link">home</a>
 					<h3>Profile</h3>
 					<a href="#" class="log-out">log-out</a>
 				</div>
 				<nav class="cab-top-mnu">
-					<ul id="tabs">
-						<li class="cab current"><a href="tab-1.html"><i class="fa fa-comment-o" aria-hidden="true"></i><p>Профиль</p></a></li>
-						<li class="cab"><a href="tab-2.html"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Баланс счета</p></a></li>
-						<li class="cab"><a href="tab-3.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
-						<li class="cab"><i class="fa fa-list-alt" aria-hidden="true"></i><p>Вывод средств</p></li>
-						<li class="cab"><i class="fa fa-user" aria-hidden="true"></i><p>История платежей</p></li>
-						<li class="cab"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Бонусы</p></li>
+					<ul>
+						<li class="cab"><a href="cabinet.html"><i class="fa fa-user" aria-hidden="true"></i><p>Профиль</p></a></li>
+						<li class="cab cab-active"><a href="user-balance-bonus.html"><i class="fa fa-database" aria-hidden="true"></i><p>Баланс счета</p></a></li>
+						<li class="cab"><a href="user-balance.html"><i class="fa fa-credit-card" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
+						<li class="cab"><a href="user-withdraw.html"><i class="fa fa-money" aria-hidden="true"></i><p>Вывод средств</p></a></li>
+						<li class="cab"><a href="user-history.html"><i class="fa fa-history" aria-hidden="true"></i><p>История платежей</p></a></li>
+						<li class="cab"><a href="user-bonus.html"><i class="fa fa-gift" aria-hidden="true"></i><p>Бонусы</p></a></li>
 					</ul>
 				</nav>
-				<div class="cab-content-wrap" id="tabs-container">
-					loading...
+				<div class="cab-content-wrap">
+					<div class="cab-item">
+						<div class="balance-content">
+							<div class="balance-top clearfix">
+								<div class="balance-item">
+									<img src="img/balance-icon.png" alt="">
+									<p>Баланс</p>
+									<span>0.00 RUB</span>
+								</div>
+								<div class="balance-item">
+									<img src="img/balance-icon2.png" alt="">
+									<p>Баланс</p>
+									<span>0.00 RUB</span>
+								</div>
+								<div class="balance-top-desc">
+									<ul>
+										<li>Дней до пересчёта уровня: <span>0</span></li>
+										<li class="balance-active">Необходимо баллов: <span>0</span></li>
+										<li>* отображается число необходимых до набора баллов, чтобы через указанное количество дней не понизился ваш бонусный уровень.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="balance-list">
+								<h2>Бонусная программа</h2>
+								<ul class="balance-slider">
+									<li>
+										<div class="bonus-section-item you-level">
+											<div class="bonus-item-head"><h3>basic</h3></div>
+											<div class="bonus-item-content">
+												<div class="bonus-content-top">
+													<h4>0%</h4>
+													<p>Бонус на депозит</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>1%</span> Манибэк</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0 руб</span> Еженедельное денежное поощрение</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0% </span>Комиссия на вывод</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Подарки</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Бинго билеты</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="bonus-section-item">
+											<div class="bonus-item-head"><h3>basic</h3></div>
+											<div class="bonus-item-content">
+												<div class="bonus-content-top">
+													<h4>0%</h4>
+													<p>Бонус на депозит</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>1%</span> Манибэк</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0 руб</span> Еженедельное денежное поощрение</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0% </span>Комиссия на вывод</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Подарки</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Бинго билеты</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="bonus-section-item">
+											<div class="bonus-item-head"><h3>basic</h3></div>
+											<div class="bonus-item-content">
+												<div class="bonus-content-top">
+													<h4>0%</h4>
+													<p>Бонус на депозит</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>1%</span> Манибэк</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0 руб</span> Еженедельное денежное поощрение</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0% </span>Комиссия на вывод</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Подарки</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Бинго билеты</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="bonus-section-item">
+											<div class="bonus-item-head"><h3>basic</h3></div>
+											<div class="bonus-item-content">
+												<div class="bonus-content-top">
+													<h4>0%</h4>
+													<p>Бонус на депозит</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>1%</span> Манибэк</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0 руб</span> Еженедельное денежное поощрение</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0% </span>Комиссия на вывод</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Подарки</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Бинго билеты</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="bonus-section-item">
+											<div class="bonus-item-head"><h3>basic</h3></div>
+											<div class="bonus-item-content">
+												<div class="bonus-content-top">
+													<h4>0%</h4>
+													<p>Бонус на депозит</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>1%</span> Манибэк</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0 руб</span> Еженедельное денежное поощрение</p>
+												</div>
+												<div class="bonus-content-text">
+													<p><span>0% </span>Комиссия на вывод</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Подарки</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>Бинго билеты</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+												<div class="bonus-content-text">
+													<p>--</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<h2>Бонусные начисления</h2>
+								<ul class="balance-bonus-info balance-slider">
+									<li>
+										<h3>Для получения бонусов необходимо</h3>
+										<ol>
+											<li><span>Зарегистрироваться в казино Колизей</span></li>
+											<li><span>Внести депозит на игровой счет для получения бонусных баллов</span></li>
+											<li><span>Накапливать бонусные баллы для перехода на новый уровень бонусной программы</span></li>
+											<li><span>Информация о текущем сосотоянии Бонусов смотрите в «Личном кабинете - Баланс счета»</span></li>
+										</ol>
+									</li>
+									<li>
+										<h3>Бонусная программа включает в себя пять уровней</h3>
+										<ol>
+											<li><span><i>Basic</i> – базовый уровень, активируется после внесения на депозит пяти платежей</span></li>
+											<li><span><i>Silver, Gold, Platinum, VIP</i> - приобретаются за бонусные баллы</span></li>
+										</ol>
+									</li>
+									<li>
+										<ol>
+											<li><span><i>Бонусы</i> — это средства, которые нельзя вывести из казино сразу после получения</span></li>
+											<li><span><i>Депозит</i> – это денежные средства, внесенные на игровой счет</span></li>
+											<li><span><i>Манибэк</i> – это денежные средства, возмещенная часть от проигранной суммы</span></li>
+											<li><span><i>Еженедельное денежное поощрение</i> – это денежные средства, начисляемые на игровой счет</span></li>
+										</ol>
+									</li>
+								</ul>
+								<h2>Бонус на первые 5 депозитов</h2>
+								<ul class="balance-section">
+									<li><span><i>Условия</i> – при внесении пяти депозитов на игровой счет – активируется базовый уровень игрока бонусной программы</span></li>
+									<li>
+										<span><i>Подробности</i> – с каждым депозитом увеличивается и процент начисления бонуса от внесённой суммы</span>
+										<ul class="bonus-down-list">
+											<li><span>1й депозит +5% (не более 2000р)</span></li>
+											<li><span>2й депозит +10% (не более 4000р)</span></li>
+											<li><span>3й депозит +15% (не более 6000р)</span></li>
+											<li><span>4й депозит +20% (не более 8000р)</span></li>
+											<li><span>5й депозит +25% (не более 10000р)</span></li>
+										</ul>
+									</li>
+									<li><span><i>Особенности</i> – бонусные накопления не сгорают</span></li>
+								</ul>
+								<h2>Бонус на депозит</h2>
+								<ul class="balance-section">
+									<h3>Еженедельно, каждый понедельник</h3>
+									<li><span><i>Условия</i> – бонусы на депозит начисляются с первого внесения денежных средств на игровой счет</span></li>
+									<li><span><i>Подробности</i> – использование бонусных средств возможно только в том случае, если основная сумма игрового счета разыграна</span></li>
+								</ul>
+								<h2>Манибэк</h2>
+								<ul class="balance-section">
+									<h3>Еженедельно, каждый вторник</h3>
+									<li><span><i>Условия</i> – возмещение части суммы от проигрыша</span></li>
+									<li><span><i>Подробности</i> – сумма возмещения зависит от игрового уровня, согласно таблице уровней</span></li>
+								</ul>
+								<h2>Денежное поощрение</h2>
+								<ul class="balance-section">
+									<h3>Еженедельно, каждая среда</h3>
+									<li><span><i>Условия</i> – денежные средства, начисляемые на игровой счет в зависимости от игрового уровня</span></li>
+									<li><span><i>Подробности</i> – денежные средства доступны для игры и вывода с игрового счета с момента зачисления</span></li>
+								</ul>
+								<div class="balance-bottom-text">
+									<p>Казино «Колизей», как организатор программы бонусов, оставляет за собой право изменять правила накопления бонусов, включая полную отмену программы бонусов, без предварительного уведомлением об этом.</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},

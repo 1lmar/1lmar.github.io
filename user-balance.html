@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>css</title>
+	<title>Cabinet</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,30 +56,201 @@
 </head>
 
 <body class="reg-form-bg">
-   <div class="cab-container">
+
+	<div class="cab-container">
 		<div class="cab-wrap">
-			<div class="cab-main-content" id="page">
+			<div class="cab-main-content">
 				<div class="cab-top-panel">
 					<a href="/" class="home-link">home</a>
 					<h3>Profile</h3>
 					<a href="#" class="log-out">log-out</a>
 				</div>
 				<nav class="cab-top-mnu">
-					<ul id="tabs">
-						<li class="cab current"><a href="tab-1.html"><i class="fa fa-comment-o" aria-hidden="true"></i><p>Профиль</p></a></li>
-						<li class="cab"><a href="tab-2.html"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Баланс счета</p></a></li>
-						<li class="cab"><a href="tab-3.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
-						<li class="cab"><i class="fa fa-list-alt" aria-hidden="true"></i><p>Вывод средств</p></li>
-						<li class="cab"><i class="fa fa-user" aria-hidden="true"></i><p>История платежей</p></li>
-						<li class="cab"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Бонусы</p></li>
+					<ul>
+						<li class="cab"><a href="cabinet.html"><i class="fa fa-user" aria-hidden="true"></i><p>Профиль</p></a></li>
+						<li class="cab"><a href="user-balance-bonus.html"><i class="fa fa-database" aria-hidden="true"></i><p>Баланс счета</p></a></li>
+						<li class="cab cab-active"><a href="user-balance.html"><i class="fa fa-credit-card" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
+						<li class="cab"><a href="user-withdraw.html"><i class="fa fa-money" aria-hidden="true"></i><p>Вывод средств</p></a></li>
+						<li class="cab"><a href="user-history.html"><i class="fa fa-history" aria-hidden="true"></i><p>История платежей</p></a></li>
+						<li class="cab"><a href="user-bonus.html"><i class="fa fa-gift" aria-hidden="true"></i><p>Бонусы</p></a></li>
 					</ul>
 				</nav>
-				<div class="cab-content-wrap" id="tabs-container">
-					loading...
+				<div class="cab-item">
+					<div class="cab-content-wrap">
+						<nav class="cab-fill-submnu">
+							<ul>
+								<li class="fill"><img src="img/visa-master.png" alt=""><p>Visa</p></li>
+								<li class="fill"><img src="img/qiwi.png" alt=""><p>Qiwi</p></li>
+								<li class="fill"><img src="img/wm.png" alt=""><p>WebMoney</p></li>
+								<li class="fill"><img src="img/yandex.png" alt=""><p>Yandex</p></li>
+								<li class="fill"><img src="img/bitcoin.png" alt=""><p>bitcoin</p></li>
+								<li class="fill"><img src="img/qiwi.png" alt=""><p>Qiwi</p></li>
+							</ul>
+						</nav>
+						<div class="cab-fill-content">
+							<div class="fill-item">
+								<form class="fill-content">
+									<div class="fill-list">
+										<ul class="clearfix">
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>15000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+											<li><div>Комиссия:</div> <span>0%</span></li>
+										</ul>
+										<ul class="fill-form">
+											<li>
+												<h3>Пополнение баланса счёта Visa/MasterCard:</h3>
+												<label>Введите сумму пополнения:</label>
+												<div class="fill-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<div class="fill-button">
+													<input type="submit" value="Пополнить баланс">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="fill-item">
+								<form class="fill-content">
+									<div class="fill-list">
+										<ul class="clearfix">
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>15000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+											<li><div>Комиссия:</div> <span>0%</span></li>
+										</ul>
+										<ul class="fill-form">
+											<li>
+												<h3>Пополнение баланса счёта Qiwi:</h3>
+												<label>Введите сумму пополнения:</label>
+												<div class="fill-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<div class="fill-button">
+													<input type="submit" value="Пополнить баланс">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="fill-item">
+								<form class="fill-content">
+									<div class="fill-list">
+										<ul class="clearfix">
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>15000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+											<li><div>Комиссия:</div> <span>0%</span></li>
+										</ul>
+										<ul class="fill-form">
+											<li>
+												<h3>Пополнение баланса счёта WebMoney:</h3>
+												<label>Введите сумму пополнения:</label>
+												<div class="fill-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<div class="fill-button">
+													<input type="submit" value="Пополнить баланс">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="fill-item">
+								<form class="fill-content">
+									<div class="fill-list">
+										<ul class="clearfix">
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>15000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+											<li><div>Комиссия:</div> <span>0%</span></li>
+										</ul>
+										<ul class="fill-form">
+											<li>
+												<h3>Пополнение баланса счёта YandexMoney:</h3>
+												<label>Введите сумму пополнения:</label>
+												<div class="fill-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<div class="fill-button">
+													<input type="submit" value="Пополнить баланс">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="fill-item">
+								<form class="fill-content">
+									<div class="fill-list">
+										<ul class="clearfix">
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>15000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+											<li><div>Комиссия:</div> <span>0%</span></li>
+										</ul>
+										<ul class="fill-form">
+											<li>
+												<h3>Пополнение баланса счёта Bitcoin:</h3>
+												<label>Введите сумму пополнения:</label>
+												<div class="fill-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<div class="fill-button">
+													<input type="submit" value="Пополнить баланс">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="fill-item">
+								<form class="fill-content">
+									<div class="fill-list">
+										<ul class="clearfix">
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>15000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+											<li><div>Комиссия:</div> <span>0%</span></li>
+										</ul>
+										<ul class="fill-form">
+											<li>
+												<h3>Пополнение баланса счёта Qiwi:</h3>
+												<label>Введите сумму пополнения:</label>
+												<div class="fill-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<div class="fill-button">
+													<input type="submit" value="Пополнить баланс">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},

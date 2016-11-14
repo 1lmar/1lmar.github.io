@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>css</title>
+	<title>Cabinet</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,30 +56,357 @@
 </head>
 
 <body class="reg-form-bg">
-   <div class="cab-container">
+
+	<div class="cab-container">
 		<div class="cab-wrap">
-			<div class="cab-main-content" id="page">
+			<div class="cab-main-content">
 				<div class="cab-top-panel">
 					<a href="/" class="home-link">home</a>
 					<h3>Profile</h3>
 					<a href="#" class="log-out">log-out</a>
 				</div>
 				<nav class="cab-top-mnu">
-					<ul id="tabs">
-						<li class="cab current"><a href="tab-1.html"><i class="fa fa-comment-o" aria-hidden="true"></i><p>Профиль</p></a></li>
-						<li class="cab"><a href="tab-2.html"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Баланс счета</p></a></li>
-						<li class="cab"><a href="tab-3.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
-						<li class="cab"><i class="fa fa-list-alt" aria-hidden="true"></i><p>Вывод средств</p></li>
-						<li class="cab"><i class="fa fa-user" aria-hidden="true"></i><p>История платежей</p></li>
-						<li class="cab"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Бонусы</p></li>
+					<ul>
+						<li class="cab cab-active"><a href="user-withdraw.html"><i class="fa fa-money" aria-hidden="true"></i><p>Вывод средств</p></a></li>
+						<li class="cab"><a href="user-history.html"><i class="fa fa-history" aria-hidden="true"></i><p>История платежей</p></a></li>
+						<li class="cab"><a href="user-bonus.html"><i class="fa fa-gift" aria-hidden="true"></i><p>Бонусы</p></a></li>
+						<li class="cab"><a href="cabinet.html"><i class="fa fa-user" aria-hidden="true"></i><p>Профиль</p></a></li>
+						<li class="cab"><a href="user-balance-bonus.html"><i class="fa fa-database" aria-hidden="true"></i><p>Баланс счета</p></a></li>
+						<li class="cab"><a href="user-balance.html"><i class="fa fa-credit-card" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
 					</ul>
 				</nav>
-				<div class="cab-content-wrap" id="tabs-container">
-					loading...
+				<div class="cab-content-wrap">
+					<div class="cab-item">
+						<nav class="cab-top-submnu">
+							<ul>
+								<li class="submnu"><img src="img/qiwi.png" alt=""><p>Qiwi</p></li>
+								<li class="submnu"><img src="img/yandex.png" alt=""><p>Yandex</p></li>
+								<li class="submnu"><img src="img/visa-master.png" alt=""><p>Visa</p></li>
+								<li class="submnu"><img src="img/wm.png" alt=""><p>WebMoney</p></li>
+								<li class="submnu"><img src="img/qiwi.png" alt=""><p>Qiwi</p></li>
+								<li class="submnu"><img src="img/qiwi.png" alt=""><p>Qiwi</p></li>
+							</ul>
+						</nav>
+						<div class="cab-submnu-content">
+							<div class="submnu-item">
+								<form class="withdraw-content">
+									<div class="withdraw-list">
+										<ul class="clearfix">
+											<li><div>Доступно для вывода:</div> <span>0.00 RUB</span></li>
+											<li><div>Ваш баланс:</div> <span>0.00 RUB</span></li>
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>14999 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+										</ul>
+										<ul class="withdraw-down-list">
+											<li><div>Время транзакции:</div><span>от 2 минут до 2 дней</span></li>
+										</ul>
+										<ul class="withdraw-form">
+											<li>
+												<h3>Введите аккаунт QIWI:</h3>
+												<label>в международном формате (но без +7)</label>
+												<div class="withdraw-input">
+													<input type="tel" placeholder="92012345678">
+												</div>
+											</li>
+											<li>
+												<h3>Введите сумму для вывода:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<h3>Введите ПИН-код:</h3>
+												<label>вводился Вами при регистрации на нашем сайте</label>
+												<div class="withdraw-input">
+													<input type="password" placeholder="....">
+												</div>
+												<a href="#" class="down-link">Забыли ПИН-код?</a>
+											</li>
+											<li>
+												<div class="withdraw-button">
+													<input type="submit" value="Вывести">
+												</div>
+											</li>
+											<li>
+												<p>Вы будете перенаправлены на страницу подтверждения. После успешно проведенной транзакции Ваш запрос будет обработан нашими менеджерами.</p>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="submnu-item">
+								<form class="withdraw-content">
+									<div class="withdraw-list">
+										<ul class="clearfix">
+											<li><div>Доступно для вывода:</div> <span>0.00 RUB</span></li>
+											<li><div>Ваш баланс:</div> <span>0.00 RUB</span></li>
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>10000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+										</ul>
+										<ul class="withdraw-down-list">
+											<li><div>Время транзакции:</div><span>от 2 минут до 2 дней</span></li>
+										</ul>
+										<ul class="withdraw-form">
+											<li>
+												<h3>Номер кошелька Yandex:</h3>
+												<label>в международном формате (но без +7)</label>
+												<div class="withdraw-input">
+													<input type="tel" placeholder="92012345678">
+												</div>
+											</li>
+											<li>
+												<h3>Введите сумму для вывода:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<h3>Введите ПИН-код:</h3>
+												<label>вводился Вами при регистрации на нашем сайте</label>
+												<div class="withdraw-input">
+													<input type="password" placeholder="....">
+												</div>
+												<a href="#" class="down-link">Забыли ПИН-код?</a>
+											</li>
+											<li>
+												<div class="withdraw-button">
+													<input type="submit" value="Вывести">
+												</div>
+											</li>
+											<li>
+												<p>Вы будете перенаправлены на страницу подтверждения. После успешно проведенной транзакции Ваш запрос будет обработан нашими менеджерами.</p>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="submnu-item">
+								<form class="withdraw-content">
+									<div class="withdraw-list">
+										<ul class="clearfix">
+											<li><div>Доступно для вывода:</div> <span>0.00 RUB</span></li>
+											<li><div>Ваш баланс:</div> <span>0.00 RUB</span></li>
+											<li><div>Минимальная сумма операции:</div> <span>500 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>10 000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>150 000 RUB</span></li>
+											<li>
+												<p class="important">
+													Важно! После отправки средств на карту, статус операции меняется на «Успешно». Далее сроки зачисления средств зависят только от вашего банка.
+												</p>
+											</li>
+										</ul>
+										<ul class="withdraw-down-list">
+											<li><div>Время транзакции:</div><span>от 2 минут до 5 дней</span></li>
+										</ul>
+										<ul class="withdraw-form">
+											<li>
+												<h3>Имя владельца карты:</h3>
+												<label>должны совпадать с именем на карте</label>
+												<div class="withdraw-input withdraw-input-m">
+													<input type="text" placeholder="Имя">
+												</div>
+												<div class="withdraw-input withdraw-input-m">
+													<input type="text" placeholder="Фамилия">
+												</div>
+											</li>
+											<li>
+												<h3>Номер карты:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="3463754768">
+												</div>
+											</li>
+											<li>
+												<h3>Срок действия:</h3>
+												<div class="withdraw-input size-2-input">
+													<input type="number" placeholder="ММ">
+												</div>
+												<i class="date-between">/</i>
+												<div class="withdraw-input size-2-input">
+													<input type="number" placeholder="ГГ">
+												</div>
+											</li>
+											<li>
+												<h3>Телефон получателя:</h3>
+												<label>в международном формате (но без +7)</label>
+												<div class="withdraw-input">
+													<input type="tel" placeholder="92012345678">
+												</div>
+											</li>
+											<li>
+												<h3>Введите сумму для вывода:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<h3>Введите ПИН-код:</h3>
+												<label>вводился Вами при регистрации на нашем сайте</label>
+												<div class="withdraw-input">
+													<input type="password" placeholder="....">
+												</div>
+												<a href="#" class="down-link">Забыли ПИН-код?</a>
+											</li>
+											<li>
+												<div class="withdraw-button">
+													<input type="submit" value="Вывести">
+												</div>
+											</li>
+											<li>
+												<p>Вы будете перенаправлены на страницу подтверждения. После успешно проведенной транзакции Ваш запрос будет обработан нашими менеджерами.</p>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="submnu-item">
+								<form class="withdraw-content">
+									<div class="withdraw-list">
+										<ul class="clearfix">
+											<li><div>Доступно для вывода:</div> <span>0.00 RUB</span></li>
+											<li><div>Ваш баланс:</div> <span>0.00 RUB</span></li>
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>10 000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+										</ul>
+										<ul class="withdraw-down-list">
+											<li><div>Время транзакции:</div><span>от 2 минут до 2 дней</span></li>
+										</ul>
+										<ul class="withdraw-form">
+											<li>
+												<h3>Номер кошелька WebMoney:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="92012345678">
+												</div>
+											</li>
+											<li>
+												<h3>Введите сумму для вывода:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<h3>Введите ПИН-код:</h3>
+												<label>вводился Вами при регистрации на нашем сайте</label>
+												<div class="withdraw-input">
+													<input type="password" placeholder="....">
+												</div>
+												<a href="#" class="down-link">Забыли ПИН-код?</a>
+											</li>
+											<li>
+												<div class="withdraw-button">
+													<input type="submit" value="Вывести">
+												</div>
+											</li>
+											<li>
+												<p>Вы будете перенаправлены на страницу подтверждения. После успешно проведенной транзакции Ваш запрос будет обработан нашими менеджерами.</p>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="submnu-item">
+								<form class="withdraw-content">
+									<div class="withdraw-list">
+										<ul class="clearfix">
+											<li><div>Доступно для вывода:</div> <span>0.00 RUB</span></li>
+											<li><div>Ваш баланс:</div> <span>0.00 RUB</span></li>
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>10000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+										</ul>
+										<ul class="withdraw-down-list">
+											<li><div>Время транзакции:</div><span>от 2 минут до 2 дней</span></li>
+										</ul>
+										<ul class="withdraw-form">
+											<li>
+												<h3>Номер кошелька Yandex:</h3>
+												<label>в международном формате (но без +7)</label>
+												<div class="withdraw-input">
+													<input type="tel" placeholder="92012345678">
+												</div>
+											</li>
+											<li>
+												<h3>Введите сумму для вывода:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<h3>Введите ПИН-код:</h3>
+												<label>вводился Вами при регистрации на нашем сайте</label>
+												<div class="withdraw-input">
+													<input type="password" placeholder="....">
+												</div>
+												<a href="#" class="down-link">Забыли ПИН-код?</a>
+											</li>
+											<li>
+												<div class="withdraw-button">
+													<input type="submit" value="Вывести">
+												</div>
+											</li>
+											<li>
+												<p>Вы будете перенаправлены на страницу подтверждения. После успешно проведенной транзакции Ваш запрос будет обработан нашими менеджерами.</p>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div class="submnu-item">
+								<form class="withdraw-content">
+									<div class="withdraw-list">
+										<ul class="clearfix">
+											<li><div>Доступно для вывода:</div> <span>0.00 RUB</span></li>
+											<li><div>Ваш баланс:</div> <span>0.00 RUB</span></li>
+											<li><div>Минимальная сумма операции:</div> <span>100 RUB</span></li>
+											<li><div>Максимальная сумма операции:</div> <span>10000 RUB</span></li>
+											<li><div>Дневной лимит:</div> <span>не ограничено</span></li>
+										</ul>
+										<ul class="withdraw-down-list">
+											<li><div>Время транзакции:</div><span>от 2 минут до 2 дней</span></li>
+										</ul>
+										<ul class="withdraw-form">
+											<li>
+												<h3>Номер кошелька Yandex:</h3>
+												<label>в международном формате (но без +7)</label>
+												<div class="withdraw-input">
+													<input type="tel" placeholder="92012345678">
+												</div>
+											</li>
+											<li>
+												<h3>Введите сумму для вывода:</h3>
+												<div class="withdraw-input">
+													<input type="number" placeholder="0.00">
+												</div>
+											</li>
+											<li>
+												<h3>Введите ПИН-код:</h3>
+												<label>вводился Вами при регистрации на нашем сайте</label>
+												<div class="withdraw-input">
+													<input type="password" placeholder="....">
+												</div>
+												<a href="#" class="down-link">Забыли ПИН-код?</a>
+											</li>
+											<li>
+												<div class="withdraw-button">
+													<input type="submit" value="Вывести">
+												</div>
+											</li>
+											<li>
+												<p>Вы будете перенаправлены на страницу подтверждения. После успешно проведенной транзакции Ваш запрос будет обработан нашими менеджерами.</p>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},

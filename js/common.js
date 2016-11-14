@@ -118,7 +118,6 @@ function loadTab(tabObj){
       }
     });
     $(".cab-fill-submnu ul").owlCarousel({
-      items: 4,
       nav: true,
       navText: "",
       responsive : {
@@ -168,20 +167,10 @@ function loadTab(tabObj){
         $("body").toggleClass("show-right-menu");
       }
     );
-
-  //   //sign up
-  // $(".tab-item").not(":first-child").hide();
-  // $(".reg-container .tab").click(function() {
-  //   $(".reg-container .tab").removeClass("reg-active").eq($(this).index()).addClass("reg-active");
-  //   $(".tab-item").hide().eq($(this).index()).fadeIn()
-  // }).eq(0).addClass("reg-active");
-
-    //cabinet-tabs
-  $(".cab-item").not(":first-child").hide();
-  $(".cab-top-mnu .owl-item").click(function() {
-    $(".cab-top-mnu .owl-item").removeClass("cab-active").eq($(this).index()).addClass("cab-active");
-    $(".cab-item").hide().eq($(this).index()).fadeIn().addClass("active-item")
-  }).eq(0).addClass("cab-active");
+  $('.table-filtr li').click(function(){
+     $('.table-filtr li').removeClass('table-active');
+     $(this).addClass('table-active');
+  });
     //withdraw-tabs
   $(".submnu-item").not(":first-child").hide();
   $(".cab-top-submnu .owl-item").click(function() {
@@ -222,20 +211,5 @@ function loadTab(tabObj){
         desktop: 1024
     }
   });
-
-  document.getElementById("sort-history").onchange = function sortHistory(){
-    var sortHistory = $('#sort-history').val();
-
-    if(sortHistory == "Все"){
-      $('tr[name="Пополнение"]').show();
-      $('tr[name="Вывод"]').show();
-    } else if(sortHistory == "Пополнение"){
-      $('tr[name="Пополнение"]').show();
-      $('tr[name="Вывод"]').hide();
-    } else if(sortHistory == "Вывод"){
-      $('tr[name="Вывод"]').show();
-      $('tr[name="Пополнение"]').hide();
-    }
-  }
 
 });

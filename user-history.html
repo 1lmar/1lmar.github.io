@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>css</title>
+	<title>Cabinet</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,30 +56,86 @@
 </head>
 
 <body class="reg-form-bg">
-   <div class="cab-container">
+
+	<div class="cab-container">
 		<div class="cab-wrap">
-			<div class="cab-main-content" id="page">
+			<div class="cab-main-content">
 				<div class="cab-top-panel">
 					<a href="/" class="home-link">home</a>
 					<h3>Profile</h3>
 					<a href="#" class="log-out">log-out</a>
 				</div>
 				<nav class="cab-top-mnu">
-					<ul id="tabs">
-						<li class="cab current"><a href="tab-1.html"><i class="fa fa-comment-o" aria-hidden="true"></i><p>Профиль</p></a></li>
-						<li class="cab"><a href="tab-2.html"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Баланс счета</p></a></li>
-						<li class="cab"><a href="tab-3.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
-						<li class="cab"><i class="fa fa-list-alt" aria-hidden="true"></i><p>Вывод средств</p></li>
-						<li class="cab"><i class="fa fa-user" aria-hidden="true"></i><p>История платежей</p></li>
-						<li class="cab"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Бонусы</p></li>
+					<ul>
+						<li class="cab"><a href="user-withdraw.html"><i class="fa fa-money" aria-hidden="true"></i><p>Вывод средств</p></a></li>
+						<li class="cab cab-active"><a href="user-history.html"><i class="fa fa-history" aria-hidden="true"></i><p>История платежей</p></a></li>
+						<li class="cab"><a href="user-bonus.html"><i class="fa fa-gift" aria-hidden="true"></i><p>Бонусы</p></a></li>
+						<li class="cab"><a href="cabinet.html"><i class="fa fa-user" aria-hidden="true"></i><p>Профиль</p></a></li>
+						<li class="cab"><a href="user-balance-bonus.html"><i class="fa fa-database" aria-hidden="true"></i><p>Баланс счета</p></a></li>
+						<li class="cab"><a href="user-balance.html"><i class="fa fa-credit-card" aria-hidden="true"></i><p>Пополнить баланс</p></a></li>
 					</ul>
 				</nav>
-				<div class="cab-content-wrap" id="tabs-container">
-					loading...
+				<div class="cab-content-wrap">
+					<div class="cab-item">
+						<ul class="table-filtr">
+							<li class="table-active">Все</li>
+							<li>Пополнение</li>
+							<li>Вывод</li>
+						</ul>
+						<div class="table-container">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>История платежей</th> 
+										<th>Приход / Расход</th>
+										<th data-breakpoints="mobile tablet laptop">Референс</th>
+										<th data-breakpoints="mobile tablet">Примечание</th>
+										<th>Дата</th>
+										<th data-breakpoints="mobile tablet">Статус</th>
+									</tr>
+								</thead>
+								<tbody id="target">
+									<tr>
+										<td style="background-image: url(img/qiwi2.png);" class="table-ref"></td>
+										<td>-2 000.00 RUB</td>
+										<td style="background-image: url(img/qiwi.png);" class="table-ref"></td>
+										<td>Вывод средств на киви Получатель: 96462326</td>
+										<td>04.11.2016 19:02</td>
+										<td class="green">Успешно!</td>
+									</tr>
+									<tr>
+										<td  style="background-image: url(img/qiwi2.png);" class="table-ref"></td>
+										<td>-1 000.00 RUB</td>
+										<td  style="background-image: url(img/visa-master.png);" class="table-ref"></td>
+										<td>Вывод средств на киви Получатель: 96462326</td>
+										<td>02.11.2016 12:50</td>
+										<td class="red">Успешно!</td>
+									</tr>
+									<tr>
+										<td style="background-image: url(img/qiwi2.png);" class="fill table-ref"></td>
+										<td>3 000.00 RUB</td>
+										<td style="background-image: url(img/yandex.png);" class="table-ref"></td>
+										<td>Пополнение средств на киви Получатель: 96462326</td>
+										<td>05.11.2016 16:16</td>
+										<td class="green">Успешно!</td>
+									</tr>
+									<tr>
+										<td style="background-image: url(img/qiwi2.png);" class="wait table-ref"></td>
+										<td>-3 000.00 RUB</td>
+										<td style="background-image: url(img/wm.png);" class="table-ref"></td>
+										<td>Вывод средств на киви Получатель: 96462326</td>
+										<td>05.11.2016 18:16</td>
+										<td class="orange">wait</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},
