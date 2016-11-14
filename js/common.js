@@ -48,7 +48,7 @@ function loadTab(tabObj){
     //   e.preventDefault();
     // });
 
-    $(".log-item, .game").magnificPopup({
+    $(".log-item, .game, .timezone-link, .lang-modal").magnificPopup({
       type:'inline',
       midClick: true,
       mainClass: 'my-mfp-zoom-in',
@@ -84,6 +84,23 @@ function loadTab(tabObj){
         },
         768 : {
           items: 8,
+        }
+      }
+    });
+     $(".cap-top-right-mnu ul").owlCarousel({
+      rtl:true,
+      items: 3,
+      nav: true,
+      navText : "",
+      responsive : {
+        0 : {
+          items: 3,
+        },
+        480 : {
+          items: 4,
+        },
+        768 : {
+          items: 5,
         }
       }
     });
