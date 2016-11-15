@@ -228,5 +228,6 @@ function loadTab(tabObj){
         desktop: 1024
     }
   });
+  $(".div-err").hide();
 
 });
