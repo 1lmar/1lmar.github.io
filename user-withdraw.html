@@ -44,9 +44,6 @@
 	</noscript>
 	<!-- Load Custom CSS Compiled without JS End -->
 
-	<script src="js/libs.min.js"></script>
-	<script src="js/common.js"></script>
-
 	<!-- Custom Browsers Color Start -->
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#000">
@@ -59,6 +56,12 @@
 </head>
 
 <body class="reg-form-bg">
+
+	<style>.loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999}.loader .loader_inner{background-image:url(../img/preloader.gif);background-size:cover;background-repeat:no-repeat;background-posirion:center center;background-color:#fff;height:60px;width:60px;margin-top:-30px;margin-left:-30px;left:50%;top:50%;position:absolute}</style>
+
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
 
 	<div class="cab-container">
 		<div class="cab-wrap">
@@ -410,6 +413,13 @@
 		</div>
 	</div>
 
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/pushy/js/pushy.min.js"></script>
+	<script src="libs/magnific-popup/magnific-popup.min.js"></script>
+	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="libs/intlTelInput/intlTelInput.min.js"></script>
+	<script src="libs/table/js/footable.min.js"></script>
+	<script src="js/common.js"></script>
 
 </body>
 </html>
