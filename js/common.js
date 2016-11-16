@@ -1,6 +1,8 @@
 $(function() {
+		//heide error
 		$(".div-err").hide();
 
+		// RegTab-start
 		var containerId = '#tabs-container';
 		var tabsId = '#tabs';
 
@@ -19,20 +21,20 @@ $(function() {
 				return false;
 		});
 
-function loadTab(tabObj){
-		if(!tabObj || !tabObj.length){ return; }
-		$(containerId).addClass('loading');
-		$(containerId).fadeOut('fast');
-		
-		$(containerId).load(tabObj.attr('href'), function(){
-				$(containerId).removeClass('loading');
-				$(containerId).fadeIn('fast');
-		});
-}
+		function loadTab(tabObj){
+				if(!tabObj || !tabObj.length){ return; }
+				$(containerId).addClass('loading');
+				$(containerId).fadeOut('fast');
+				
+				$(containerId).load(tabObj.attr('href'), function(){
+						$(containerId).removeClass('loading');
+						$(containerId).fadeIn('fast');
+				});
+		}
+		// RegTab-end
 
 		$("body").addClass("mobile-mnu");
-
-
+		
 		$(".log-item, .game, .timezone-link, .lang-modal").magnificPopup({
 			type:'inline',
 			midClick: true,
@@ -72,7 +74,7 @@ function loadTab(tabObj){
 				}
 			}
 		});
-		 $(".cap-top-right-mnu ul").owlCarousel({
+		$(".cap-top-right-mnu ul").owlCarousel({
 			rtl:true,
 			items: 3,
 			nav: true,
@@ -90,8 +92,6 @@ function loadTab(tabObj){
 			}
 		});
 		$(".cab-top-mnu ul").owlCarousel({
-			// center: true,
-			items: 3,
 			nav: true,
 			navText : "",
 			responsive : {
@@ -109,7 +109,6 @@ function loadTab(tabObj){
 		$(".cab-top-submnu ul").owlCarousel({
 			nav: true,
 			navText: "",
-			items: 4,
 			responsive : {
 				0 : {
 					items: 4,
@@ -207,6 +206,5 @@ $(window).load(function() {
 
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
-
 
 }); 
