@@ -1,0 +1,817 @@
+.footable
+  .btn, .caret
+    display: inline-block
+    vertical-align: middle
+
+.footable-details.table, .footable.table
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  *
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.footable-details.table th, .footable.table th
+  text-align: left
+
+.footable-details.table, .footable.table
+  width: 100%
+  max-width: 100%
+  margin-bottom: 20px
+
+.footable-details.table >
+  caption + thead > tr:first-child >
+    td, th
+      border-top: 0
+  colgroup + thead > tr:first-child >
+    td, th
+      border-top: 0
+  thead:first-child > tr:first-child >
+    td, th
+      border-top: 0
+
+.footable.table >
+  caption + thead > tr:first-child >
+    td, th
+      border-top: 0
+  colgroup + thead > tr:first-child >
+    td, th
+      border-top: 0
+  thead:first-child > tr:first-child >
+    td, th
+      border-top: 0
+
+.footable-details.table >
+  tbody > tr >
+    td, th
+      padding: 8px
+      line-height: 1.42857143
+      vertical-align: top
+      border-top: 1px solid #ddd
+  tfoot > tr >
+    td, th
+      padding: 8px
+      line-height: 1.42857143
+      vertical-align: top
+      border-top: 1px solid #ddd
+  thead > tr >
+    td, th
+      padding: 8px
+      line-height: 1.42857143
+      vertical-align: top
+      border-top: 1px solid #ddd
+
+.footable.table >
+  tbody > tr >
+    td, th
+      padding: 8px
+      line-height: 1.42857143
+      vertical-align: top
+      border-top: 1px solid #ddd
+  tfoot > tr >
+    td, th
+      padding: 8px
+      line-height: 1.42857143
+      vertical-align: top
+      border-top: 1px solid #ddd
+  thead > tr >
+    td, th
+      padding: 8px
+      line-height: 1.42857143
+      vertical-align: top
+      border-top: 1px solid #ddd
+
+.footable-details.table > thead > tr >
+  td, th
+    vertical-align: bottom
+    border-bottom: 2px solid #ddd
+
+.footable.table > thead > tr >
+  td, th
+    vertical-align: bottom
+    border-bottom: 2px solid #ddd
+
+.footable-details.table-condensed >
+  tbody > tr >
+    td, th
+      padding: 5px
+  tfoot > tr >
+    td, th
+      padding: 5px
+  thead > tr >
+    td, th
+      padding: 5px
+
+.footable.table-condensed >
+  tbody > tr >
+    td, th
+      padding: 5px
+  tfoot > tr >
+    td, th
+      padding: 5px
+  thead > tr >
+    td, th
+      padding: 5px
+
+.footable-details.table-bordered
+  border: 1px solid #ddd
+  >
+    tbody > tr >
+      td, th
+        border: 1px solid #ddd
+    tfoot > tr >
+      td, th
+        border: 1px solid #ddd
+    thead > tr >
+      td, th
+        border: 1px solid #ddd
+
+.footable.table-bordered
+  border: 1px solid #ddd
+  >
+    tbody > tr >
+      td, th
+        border: 1px solid #ddd
+    tfoot > tr >
+      td, th
+        border: 1px solid #ddd
+    thead > tr >
+      td, th
+        border: 1px solid #ddd
+
+.footable-details.table-bordered > thead > tr >
+  td, th
+    border-bottom-width: 2px
+
+.footable.table-bordered > thead > tr >
+  td, th
+    border-bottom-width: 2px
+
+.footable-details.table-striped > tbody > tr:nth-child(odd), .footable.table-striped > tbody > tr:nth-child(odd)
+  background-color: #f9f9f9
+
+.footable-details.table-hover > tbody > tr:hover
+  background-color: #f5f5f5
+
+.footable
+  &.table-hover > tbody > tr:hover
+    background-color: #f5f5f5
+  .btn
+    padding: 6px 12px
+    margin-bottom: 0
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.42857143
+    text-align: center
+    white-space: nowrap
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    cursor: pointer
+    -webkit-appearance: button
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    background-image: none
+    border: 1px solid transparent
+    border-radius: 4px
+    overflow: visible
+    text-transform: none
+    &.focus, &:focus, &:hover
+      color: #333
+      text-decoration: none
+  .btn-default
+    color: #333
+    background-color: #fff
+    border-color: #ccc
+    &.active, &.focus, &:active, &:focus, &:hover
+      color: #333
+      background-color: #e6e6e6
+      border-color: #adadad
+  .open > .dropdown-toggle.btn-default
+    color: #333
+    background-color: #e6e6e6
+    border-color: #adadad
+  .btn-primary
+    color: #fff
+    background-color: #337ab7
+    border-color: #2e6da4
+    &.active, &.focus, &:active, &:focus, &:hover
+      color: #fff
+      background-color: #286090
+      border-color: #204d74
+  .open > .dropdown-toggle.btn-primary
+    color: #fff
+    background-color: #286090
+    border-color: #204d74
+  .btn-group, .btn-group-vertical
+    position: relative
+    display: inline-block
+    vertical-align: middle
+  .btn-group > .btn:first-child
+    &:not(:last-child):not(.dropdown-toggle)
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+    margin-left: 0
+  .btn-group-vertical > .btn, .btn-group > .btn
+    position: relative
+    float: left
+  .btn-group-xs > .btn, .btn-xs
+    padding: 1px 5px
+    font-size: 12px
+    line-height: 1.5
+    border-radius: 3px
+  .btn-group-sm > .btn, .btn-sm
+    padding: 5px 10px
+    font-size: 12px
+    line-height: 1.5
+    border-radius: 3px
+  .btn-group-lg > .btn, .btn-lg
+    padding: 10px 16px
+    font-size: 18px
+    line-height: 1.3333333
+    border-radius: 6px
+  .caret
+    width: 0
+    height: 0
+    margin-left: 2px
+    border-top: 4px solid
+    border-right: 4px solid transparent
+    border-left: 4px solid transparent
+  .btn .caret
+    margin-left: 0
+
+.form-group
+  margin-bottom: 15px
+
+.footable
+  .form-control
+    display: block
+    width: 100%
+    height: 34px
+    padding: 6px 12px
+    margin: 0
+    font-family: inherit
+    font-size: 14px
+    line-height: 1.42857143
+    color: #555
+    background-color: #fff
+    background-image: none
+    border: 1px solid #ccc
+    border-radius: 4px
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  .input-group
+    position: relative
+    display: table
+    border-collapse: separate
+    .form-control
+      position: relative
+      z-index: 2
+      float: left
+      width: 100%
+      margin-bottom: 0
+  .input-group-btn
+    position: relative
+    font-size: 0
+  .input-group-addon, .input-group-btn
+    width: 1%
+    white-space: nowrap
+    vertical-align: middle
+  .input-group .form-control, .input-group-addon
+    display: table-cell
+  .input-group-btn
+    display: table-cell
+    &:last-child >
+      .btn, .btn-group
+        margin-left: -1px
+    > .btn
+      + .btn
+        margin-left: -1px
+      position: relative
+      &:active, &:focus, &:hover
+        z-index: 2
+  .input-group .form-control:first-child, .input-group-addon:first-child
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+  .input-group-btn
+    &:first-child >
+      .btn, .btn-group > .btn, .dropdown-toggle
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+    &:last-child >
+      .btn-group:not(:last-child) > .btn, .btn:not(:last-child):not(.dropdown-toggle)
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+  .input-group .form-control:last-child, .input-group-addon:last-child
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+  .input-group-btn
+    &:first-child >
+      .btn-group:not(:first-child) > .btn, .btn:not(:first-child)
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+    &:last-child >
+      .btn, .btn-group > .btn, .dropdown-toggle
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+  .checkbox, .radio
+    position: relative
+    display: block
+    margin-top: 10px
+    margin-bottom: 10px
+  .checkbox label, .radio label
+    max-width: 100%
+    min-height: 20px
+    padding-left: 20px
+    margin-bottom: 0
+    font-weight: 400
+    cursor: pointer
+  .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]
+    position: absolute
+    margin: 4px 0 0 -20px
+    line-height: normal
+  .dropdown-menu
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: 1000
+    display: none
+    float: left
+    min-width: 160px
+    padding: 5px 0
+    margin: 2px 0 0
+    font-size: 14px
+    text-align: left
+    list-style: none
+    background-color: #fff
+    -webkit-background-clip: padding-box
+    background-clip: padding-box
+    border: 1px solid #ccc
+    border: 1px solid rgba(0, 0, 0, 0.15)
+    border-radius: 4px
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  .open > .dropdown-menu
+    display: block
+  .dropdown-menu-right
+    right: 0
+    left: auto
+  .dropdown-menu > li > a
+    display: block
+    padding: 3px 20px
+    clear: both
+    font-weight: 400
+    line-height: 1.42857143
+    color: #333
+    white-space: nowrap
+    &:focus, &:hover
+      color: #262626
+      text-decoration: none
+      background-color: #f5f5f5
+  .pagination
+    display: inline-block
+    padding-left: 0
+    margin: 20px 0
+    border-radius: 4px
+    >
+      li
+        display: inline
+        &:first-child >
+          a, span
+            margin-left: 0
+            border-top-left-radius: 4px
+            border-bottom-left-radius: 4px
+        >
+          a, span
+            position: relative
+            float: left
+            padding: 6px 12px
+            margin-left: -1px
+            line-height: 1.42857143
+            color: #337ab7
+            text-decoration: none
+            background-color: #fff
+            border: 1px solid #ddd
+          a
+            &:focus, &:hover
+              color: #23527c
+              background-color: #eee
+              border-color: #ddd
+          span
+            &:focus, &:hover
+              color: #23527c
+              background-color: #eee
+              border-color: #ddd
+      .active >
+        a
+          z-index: 2
+          color: #fff
+          cursor: default
+          background-color: #337ab7
+          border-color: #337ab7
+          &:focus, &:hover
+            z-index: 2
+            color: #fff
+            cursor: default
+            background-color: #337ab7
+            border-color: #337ab7
+        span
+          z-index: 2
+          color: #fff
+          cursor: default
+          background-color: #337ab7
+          border-color: #337ab7
+          &:focus, &:hover
+            z-index: 2
+            color: #fff
+            cursor: default
+            background-color: #337ab7
+            border-color: #337ab7
+      .disabled >
+        a
+          color: #777
+          cursor: not-allowed
+          background-color: #fff
+          border-color: #ddd
+          &:focus, &:hover
+            color: #777
+            cursor: not-allowed
+            background-color: #fff
+            border-color: #ddd
+        span
+          color: #777
+          cursor: not-allowed
+          background-color: #fff
+          border-color: #ddd
+          &:focus, &:hover
+            color: #777
+            cursor: not-allowed
+            background-color: #fff
+            border-color: #ddd
+  .label
+    display: inline
+    padding: .2em .6em .3em
+    font-size: 75%
+    font-weight: 700
+    line-height: 1
+    color: #fff
+    text-align: center
+    white-space: nowrap
+    vertical-align: baseline
+    border-radius: .25em
+  .label-default
+    background-color: #777
+
+.footable-loader.well
+  min-height: 20px
+  padding: 19px
+  margin-bottom: 20px
+  background-color: #f5f5f5
+  border: 1px solid #e3e3e3
+  border-radius: 4px
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
+
+.footable .sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  border: 0
+
+table
+  &.footable-details
+    margin-bottom: 0
+  &.footable
+    > thead > tr.footable-filtering > th div.form-group
+      margin-bottom: 0
+    position: relative
+    width: 100%
+    border-spacing: 0
+    border-collapse: collapse
+  &.footable-details
+    position: relative
+    width: 100%
+    border-spacing: 0
+    border-collapse: collapse
+  > tbody > tr > td > span.footable-toggle
+    margin-right: 8px
+    opacity: .3
+    &.last-column
+      margin-left: 8px
+      float: right
+  &.table-condensed > tbody > tr > td > span.footable-toggle
+    margin-right: 5px
+  &.footable-details
+    >
+      tbody > tr
+        >
+          th:nth-child(1)
+            min-width: 40px
+            width: 120px
+          td:nth-child(2)
+            word-break: break-all
+        &:first-child >
+          td, th
+            border-top-width: 0
+      tfoot > tr:first-child >
+        td, th
+          border-top-width: 0
+      thead > tr:first-child >
+        td, th
+          border-top-width: 0
+    &.table-bordered >
+      tbody > tr:first-child >
+        td, th
+          border-top-width: 1px
+      tfoot > tr:first-child >
+        td, th
+          border-top-width: 1px
+      thead > tr:first-child >
+        td, th
+          border-top-width: 1px
+
+@media (min-width: 768px)
+  .footable .form-inline
+    .form-group
+      display: inline-block
+      margin-bottom: 0
+      vertical-align: middle
+    .form-control
+      display: inline-block
+      width: auto
+      vertical-align: middle
+    .input-group
+      display: inline-table
+      vertical-align: middle
+      .form-control, .input-group-addon, .input-group-btn
+        width: auto
+      > .form-control
+        width: 100%
+
+div.footable-loader
+  vertical-align: middle
+  text-align: center
+  height: 300px
+  position: relative
+  > span.fooicon
+    display: inline-block
+    opacity: .3
+    font-size: 30px
+    line-height: 32px
+    width: 32px
+    height: 32px
+    margin-top: -16px
+    margin-left: -16px
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-animation: fooicon-spin-r 2s infinite linear
+    animation: fooicon-spin-r 2s infinite linear
+
+table.footable > tbody > tr
+  &.footable-empty > td
+    vertical-align: middle
+    text-align: center
+    font-size: 30px
+  >
+    td, th
+      display: none
+  &.footable-detail-row >
+    td, th
+      display: table-cell
+  &.footable-empty >
+    td, th
+      display: table-cell
+
+@-webkit-keyframes fooicon-spin-r
+  0%
+    -webkit-transform: rotate(0)
+    transform: rotate(0)
+
+  100%
+    -webkit-transform: rotate(359deg)
+    transform: rotate(359deg)
+
+
+@keyframes fooicon-spin-r
+  0%
+    -webkit-transform: rotate(0)
+    transform: rotate(0)
+
+  100%
+    -webkit-transform: rotate(359deg)
+    transform: rotate(359deg)
+
+
+.fooicon
+  display: inline-block
+  font-size: inherit
+  font-family: FontAwesome !important
+  font-style: normal
+  font-weight: 400
+  line-height: 1
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  transform: translate(0, 0)
+  &:after, &:before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.fooicon-loader:before
+  content: "\f01e"
+
+.fooicon-plus:before
+  content: "\f067"
+
+.fooicon-minus:before
+  content: "\f068"
+
+.fooicon-search:before
+  content: "\f002"
+
+.fooicon-remove:before
+  content: "\f00d"
+
+.fooicon-sort:before
+  content: "\f0dc"
+
+.fooicon-sort-asc:before
+  content: "\f160"
+
+.fooicon-sort-desc:before
+  content: "\f161"
+
+.fooicon-pencil:before
+  content: "\f040"
+
+.fooicon-trash:before
+  content: "\f1f8"
+
+.fooicon-eye-close:before
+  content: "\f070"
+
+.fooicon-flash:before
+  content: "\f0e7"
+
+.fooicon-cog:before
+  content: "\f013"
+
+.fooicon-stats:before
+  content: "\f080"
+
+table
+  &.footable
+    > thead > tr.footable-filtering > th
+      border-bottom-width: 1px
+      font-weight: 400
+    &.footable-filtering-right > thead > tr.footable-filtering > th, > thead > tr.footable-filtering > th
+      text-align: right
+    &.footable-filtering-left > thead > tr.footable-filtering > th
+      text-align: left
+  &.footable-paging-center > tfoot > tr.footable-paging > td
+    text-align: center
+  &.footable
+    &.footable-filtering-center > thead > tr.footable-filtering > th
+      text-align: center
+    >
+      tfoot > tr.footable-paging > td
+        text-align: center
+      thead > tr.footable-filtering > th
+        div
+          &.form-group + div.form-group
+            margin-top: 5px
+          &.input-group
+            width: 100%
+        ul.dropdown-menu > li > a.checkbox
+          margin: 0
+          display: block
+          position: relative
+          > label
+            display: block
+            padding-left: 20px
+          input[type=checkbox]
+            position: absolute
+            margin-left: -20px
+      tbody > tr >
+        td.footable-sortable, th.footable-sortable
+          position: relative
+          padding-right: 30px
+          cursor: pointer
+      tfoot > tr >
+        td.footable-sortable, th.footable-sortable
+          position: relative
+          padding-right: 30px
+          cursor: pointer
+      thead > tr >
+        td.footable-sortable, th.footable-sortable
+          position: relative
+          padding-right: 30px
+          cursor: pointer
+
+@media (min-width: 768px)
+  table.footable > thead > tr.footable-filtering > th div
+    &.input-group
+      width: auto
+    &.form-group
+      margin-left: 2px
+      margin-right: 2px
+      + div.form-group
+        margin-top: 0
+
+td.footable-sortable > span.fooicon, th.footable-sortable > span.fooicon
+  position: absolute
+  right: 6px
+  top: 50%
+  margin-top: -7px
+  opacity: 0
+  transition: opacity .3s ease-in
+
+td.footable-sortable
+  &.footable-asc > span.fooicon, &.footable-desc > span.fooicon, &:hover > span.fooicon
+    opacity: 1
+
+th.footable-sortable
+  &.footable-asc > span.fooicon, &.footable-desc > span.fooicon, &:hover > span.fooicon
+    opacity: 1
+
+table
+  &.footable-sorting-disabled
+    td.footable-sortable
+      &.footable-asc > span.fooicon, &.footable-desc > span.fooicon, &:hover > span.fooicon
+        opacity: 0
+        visibility: hidden
+    th.footable-sortable
+      &.footable-asc > span.fooicon, &.footable-desc > span.fooicon, &:hover > span.fooicon
+        opacity: 0
+        visibility: hidden
+  &.footable > tfoot > tr.footable-paging > td >
+    ul.pagination
+      margin: 10px 0 0
+    span.label
+      display: inline-block
+      margin: 0 0 10px
+      padding: 4px 10px
+  &.footable-paging-left > tfoot > tr.footable-paging > td
+    text-align: left
+  &.footable-editing-right
+    td.footable-editing, tr.footable-editing
+      text-align: right
+  &.footable-paging-right > tfoot > tr.footable-paging > td
+    text-align: right
+
+ul.pagination > li.footable-page
+  display: none
+  &.visible
+    display: inline
+
+td.footable-editing
+  width: 90px
+  max-width: 90px
+
+table
+  &.footable-editing-no-delete td.footable-editing, &.footable-editing-no-edit td.footable-editing, &.footable-editing-no-view td.footable-editing
+    width: 70px
+    max-width: 70px
+  &.footable-editing-no-delete.footable-editing-no-view td.footable-editing
+    width: 50px
+    max-width: 50px
+  &.footable-editing-no-edit
+    &.footable-editing-no-delete td.footable-editing, &.footable-editing-no-view td.footable-editing
+      width: 50px
+      max-width: 50px
+    &.footable-editing-no-delete.footable-editing-no-view
+      td.footable-editing, th.footable-editing
+        width: 0
+        max-width: 0
+        display: none !important
+  &.footable-editing-left
+    td.footable-editing, tr.footable-editing
+      text-align: left
+  &.footable-editing button
+    &.footable-add, &.footable-hide
+      display: none
+  &.footable-editing-show button.footable-show
+    display: none
+  &.footable-editing
+    &.footable-editing-always-show
+      button
+        &.footable-hide, &.footable-show
+          display: none
+      &.footable-editing-no-add tr.footable-editing
+        display: none
+      button.footable-add
+        display: inline-block
+    &.footable-editing-show button
+      &.footable-add, &.footable-hide
+        display: inline-block
