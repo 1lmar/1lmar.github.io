@@ -9,6 +9,13 @@ $(function() {
 			}
 	});
 
+	$(".toggle").click(
+			function(){
+				$(this).toggleClass("on");
+				$("body").toggleClass("show-menu");
+			}
+		);
+
 	$(".slider-wrap").owlCarousel({
 		loop:true,
 		autoplay:true,
