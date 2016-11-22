@@ -52,4 +52,11 @@ $(function() {
 		}
 	});
 
+	$(".com-link").magnificPopup({
+		type:'inline',
+		midClick: true,
+		mainClass: 'my-mfp-zoom-in',
+		removalDelay: 300,
+	});
+
 });
