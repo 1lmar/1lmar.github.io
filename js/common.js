@@ -26,10 +26,10 @@ $(function() {
 				items:2,
 			},
 			480 : {
-				items:4,
+				items:5,
 			},
 			768 : {
-				items:8,
+				items:5,
 			}
 		}
 	});
