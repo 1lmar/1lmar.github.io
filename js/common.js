@@ -18,6 +18,7 @@ $(function() {
 
 	$(".slider-wrap").owlCarousel({
 		loop:true,
+		margin: 50,
 		autoplay:true,
 		autoplayTimeout:3000,
 		autoplayHoverPause:true,
