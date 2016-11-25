@@ -1,5 +1,7 @@
 $(function() {
 
+	$(".main-head").css("height", $(window).height());
+
 	var $menu = $("#menu");
 	$(window).scroll(function(){
 			if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
