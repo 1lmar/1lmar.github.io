@@ -61,7 +61,7 @@ $(function() {
 		removalDelay: 300,
 	});
 
-	$('.brands-gallery').magnificPopup({
+	$('.brands-gallery, .accordion').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
