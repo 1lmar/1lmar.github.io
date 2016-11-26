@@ -54,14 +54,14 @@ $(function() {
 		}
 	});
 
-	$(".com-link").magnificPopup({
+	$(".com-link, .brand-link").magnificPopup({
 		type:'inline',
 		midClick: true,
 		mainClass: 'my-mfp-zoom-in',
 		removalDelay: 300,
 	});
 
-	$('.brands-gallery, .accordion').magnificPopup({
+	$('.accordion').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
@@ -93,7 +93,7 @@ $(function() {
 			}
 	});
 
-	jQuery(".commission-block, .brands-gallery a").addClass("v-hidden").viewportChecker({
+	jQuery(".commission-block, .brands-block").addClass("v-hidden").viewportChecker({
 		classToAdd: 'visible animated zoomIn',
 		offset: 100
 	});
