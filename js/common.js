@@ -93,4 +93,21 @@ $(function() {
 			}
 	});
 
+	jQuery(".commission-block, .brands-gallery a").addClass("v-hidden").viewportChecker({
+		classToAdd: 'visible animated zoomIn',
+		offset: 100
+	});
+	jQuery(".left-animate").addClass("v-hidden").viewportChecker({
+		classToAdd: 'visible animated slideInLeft',
+		offset: 100
+	});
+	jQuery(".right-animate").addClass("v-hidden").viewportChecker({
+		classToAdd: 'visible animated slideInRight',
+		offset: 100
+	});
+	jQuery(".list-icon").addClass("v-hidden").viewportChecker({
+		classToAdd: 'visible animated flipInY',
+		offset: 100
+	});
+
 });
