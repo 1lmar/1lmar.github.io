@@ -1,17 +1,12 @@
 $(function() {
-
-	$(".main-slide").owlCarousel({
-		items: 1,
-		loop: true,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true
+		
+	$(".info-list .info-header").click(function() {
+		if($(this).next("div").is(":visible")){
+			$(this).next("div").slideUp("slow");
+		} else {
+			$(".info-list .info-content").slideUp("slow");
+			$(this).next("div").slideToggle("slow");
+		}
 	});
-
-	$(".game-block").not(":first-child").hide();
-	$(".top-mnu .tab").click(function() {
-		$(".top-mnu .tab").removeClass("active").eq($(this).index()).addClass("active");
-		$(".game-block").hide().eq($(this).index()).fadeIn().addClass("active")
-	}).eq(0).addClass("active");
 
 });
