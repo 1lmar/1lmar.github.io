@@ -73,4 +73,30 @@ $(document).ready(function(){
 	showFrequency();
 	getXMLRacers();
 	startAJAXcalls();
+
+
+	$('#btnSave').click(function() {
+		var data = $("addRunner :input").serializeArray();
+		$.post($("#addRunner").attr('action'),data,function(json) {
+			if(json.status == "fail"){
+				alert(json.message);
+			}
+			if (json.status == "success") {
+				alert(json.message);
+				clearInputs();
+			}
+		}, "json");
+	});
+
+	function clearInputs() {
+		$("#addRunner :input").each(function() {
+			$(this).val('');
+		});
+	}
+
+	$("#addRunner").submit(function() {
+		return false;
+	});
+
+
 });
