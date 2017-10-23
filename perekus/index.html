@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Перекуси | кафе быстрого питания</title>
+</head>
+<body class="">
+
+  <header class="main-head">
+    <div class="container grid grid-head">
+      <div class="city">г.Альметьевск</div>
+      <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+      <div class="callback">
+        <i>+7934-573-23-62</i>
+        <span>обратный звонок</span>
+      </div>
+    </div>
+  </header>
+  <section class="main-content grid">
+    <div class="categories">
+      <div class="title">Категории</div>
+      <ul id="categories-list" class="categories-list"></ul>
+    </div>
+    <div class="list-goods">
+      <div class="title">Список товаров</div>
+      <div class="down-title grid">
+        <h2 id="titleGood">Все товары</h2>
+        <div id="count-goods" class="count-goods"></div>
+      </div>
+      <div id="goods" class="goods grid"></div>
+    </div>
+    <div class="basket">
+      <div class="title">Корзина</div>
+      <div class="busket-pay busket-add-icon">
+        <div class="busket-img"><span id="circleCount">0</span><img src="img/busket.png" alt=""></div>
+        <div class="busket-del"><img src="img/delete.png" alt=""></div>
+      </div>
+      <ul id="busket-list"></ul>
+      <div class="busket-calc">
+        Выбранно товаров: <span id="countSize" class="count-size">0</span><br>
+        Итоговая сумма: <span id="countSum" class="count-sum">0</span> р.
+      </div>
+      <a href="#total-sum" id="total-sum" class="button button-total">Поулчить чек</a>
+      <div class="popup-total-sum">
+        <div id="close">x</div>
+        <h3>ООО "Перекуси"</h3>
+        <div id="time" class="time"></div>
+        <table id="table"></table>
+      </div>
+    </div>
+  </section>
+<script src="js/categories.js"></script>
+<script src="js/goods.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
