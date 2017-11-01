@@ -54,6 +54,29 @@ body
 .bd
 	border: 2px solid #cdcdcd
 	box-shadow: 2px 2px 10px rgba(0,0,0,0.2)
+.right-bd
+	background-color: #fff
+	padding: 15px
+	border-top: 4px solid $accent
+	border-radius: 0 0 15px 0
+	margin-bottom: 30px
+	.title
+		i
+			background-color: $accent
+			padding: 3px
+			color: #f1f1f1
+			float: left
+			margin-right: 5px
+		h2
+			font-size: 14px
+			font-family: "robotobold", sans-serif
+			text-transform: uppercase
+			color: #666
+	.line
+		height: 8px
+		width: 100%
+		background-color: lighten($gray-text, 32%)
+		margin: 12px 0
 .s-adv
 	padding: 40px 0
 .s-title
@@ -199,6 +222,7 @@ h1,h2,h3,h4,p
 		background-color: #fff
 		padding: 15px
 		border-radius: 0 0 18px 0
+		margin-bottom: 30px
 		&:hover
 			box-shadow: 2px 2px 19px rgba(0,0,0,0.2)
 		&_img
@@ -218,6 +242,8 @@ h1,h2,h3,h4,p
 			display: block
 			background-color: lighten($gray-text, 25%)
 			margin: 5px 0
+		&_desc
+			text-decoration: underline
 .btn
 	&-wrap
 		text-align: center
@@ -233,5 +259,90 @@ h1,h2,h3,h4,p
 		box-shadow: 2px 2px 19px rgba(0,0,0,0.2)
 .s-news
 	border-bottom: 2px dashed #fff
+.s-achievment
+	ul,li
+		margin-left: 40px
+	li
+		list-style-type: disc
+		line-height: 1
+		margin-bottom: 15px
+
+.accordion
+  width: 100%
+  margin: 0 auto
+  .accordion_item
+    margin-bottom: 1px
+    position: relative
+  .title_block
+    font-weight: 400
+    font-size: 18px
+    color: #eee
+    cursor: pointer
+    background: #009688
+    padding: 10px 55px 10px 15px
+    transition: all 0.2s linear 0
+    &:before
+      content: ''
+      height: 8px
+      width: 8px
+      display: block
+      border: 2px solid #fefefe
+      border-right-width: 0
+      border-top-width: 0
+      transform: rotate(-45deg)
+      position: absolute
+      right: 20px
+      top: 18px
+  .active_block .title_block:before
+    border: 2px solid #fefefe
+    border-left-width: 0
+    border-bottom-width: 0
+    top: 18px
+  .title_block:hover
+    background: #26A69A
+  .active_block .title_block
+    background: #26A69A
+    color: #fefefe
+  .info
+    display: none
+    padding: 10px 15px
+    overflow: hidden
+    background: #f7f7f7
+  .info_item
+    margin-bottom: 10px
+  .info img
+    height: auto
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+.large-img
+  width: 100%
+  margin-bottom: 10px
+.img-left
+  width: 25%
+  float: left
+  margin: 5px 15px 5px 0
+.img-right
+  width: 25%
+  float: right
+  margin: 5px 0 5px 15px
+
+.right-manage_soc
+	h2
+		color: $accent
+	li
+		margin-bottom: 10px
+		color: darken($gray-text, 15%)
+		font-family: "robotobold", sans-serif
+		font-size: 14px
+.right-contacts
+	li
+		font-size: 14px
+		color: darken($gray-text, 22%)
+		&:last-child
+			color: darken($gray-text, 20%)
+			font-family: "robotobold", sans-serif
+	ul
+		margin-bottom: 15px
+
+
 
 @import "media" // Всегда в конце
