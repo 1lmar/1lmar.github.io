@@ -1,153 +1,35 @@
-<?php include("connection.php"); ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
 
 	<meta charset="utf-8">
+	<!-- <base href="/"> -->
 
-	<title>Game Pipe</title>
+	<title>Uchi.ru</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+	
+	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-
-	<!-- Chrome, Firefox OS and Opera -->
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<!-- Custom Browsers Color End -->
 
-	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
-<body class="welcome">
+<body>
 
-	<div class="game-start">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="welcome">
-						<div class="logo"><img src="img/head-logo.png" alt=""></div>
-						<div class="down-icon"><img src="img/down.png" alt=""></div>
-						<div class="game-form">
-							<div class="game-formline"><input class="nick-name" type="text" name="name" placeholder="Введите имя" required></div>
-							<div class="game-formline"><input id="start-btn" class="btn start-btn" type="submit" name="start" value="Начать игру"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	Uchi.ru test
 
-	<div class="game-field_section">
-		<div class="container">
-			<div class="row">
-				<div class="game-field_wrap clearfix">
-					<div class="col-md-8">
-						<div class="game-field">
-							<div class="game-paused">
-								<div class="game-paused_text">
-									<h3>Игра приостановлена</h3>
-								</div>
-							</div>
-							<table>
-								<tr>
-									<td class="pipe-item"><img src="img/angle.png" alt=""></td>
-									<td><img src="img/pipe-3.png" alt=""></td>
-									<td><img src="img/angle.png" alt=""></td>
-								</tr>
-								<tr>
-									<td><img src="img/pipe-2.png" alt=""></td>
-									<td><img src="img/pipe-center.png" alt=""></td>
-									<td><img src="img/pipe-right.png" alt=""></td>
-								</tr>
-								<tr>
-									<td><img src="img/angle.png" alt=""></td>
-									<td><img src="img/pipe-3.png" alt=""></td>
-									<td><img src="img/angle.png" alt=""></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="game-field_right">
-							<div class="right-top">
-								<ul>
-									<li><span>Time:</span> <span class="b time"></span></li>
-									<li><span>Pause/Play:</span> <span class="b pause">||</span></li>
-								</ul>
-							</div>
-							<div class="right-down">
-								<ul>
-									<li><span>Score:</span> <span class="b score"></span></li>
-									<li><span class="name">Player</span></li>
-								</ul>
-							</div>
-						</div>
-						<div class="right-logo">
-							<img src="img/logo-play.png" alt="" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="game-result_section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="top-logo"><img class="img-responsive" src="img/head-logo.png" alt=""></div>
-				</div>
-				<div class="col-md-7"><div class="start-game"><a href="/" class="btn start-btn btn-new">Новая игра</a></div></div>
-				<div class="col-md-12">
-					<div class="game-result_table">
-						<div class="add-user"></div>
-						<table>
-							<tr>
-								<td>№</td>
-								<td>Name</td>
-								<td>Score</td>
-								<td>Time</td>
-							</tr>
-							<tr>
-								<?php
-									$result = mysqli_query($link, "SELECT * FROM `gamer`");
-									while ($row = mysqli_fetch_assoc($result)) {
-										?>
-											<td></td>
-											<td><?php echo $row["name"]; ?></td>
-											<td><?php echo $row["score"]; ?></td>
-											<td><?php echo $row["time"]; ?></td>
-										<?php
-									}
-
-								?>
-							</tr>
-							<tr class="current">
-								<td>10</td>
-								<td>Player</td>
-								<td>10</td>
-								<td>10:00</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
 
 </body>
