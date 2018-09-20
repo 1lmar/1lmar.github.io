@@ -3,10 +3,12 @@ $(function() {
 	var a, b, total = 0;
 
 	var ruleWidth = 20; //размерность линейки
+	var minWidth = 1; //Минимальное число
+	var maxWidth = 19; //Максимальное число
 
 	var lineWidth = 39; //Ширина 1см = 39px
-	var calcFirst = $("#calcFirst"); //Первая иифра
-	var calcSec = $("#calcSec"); //Вторая иифра
+	var calcFirst = $("#calcFirst"); //Первая цифра
+	var calcSec = $("#calcSec"); //Вторая цифра
 	var firstLine = $(".line-first"); //Первая линия
 	var secLine = $(".line-sec"); //вторая линия
 
@@ -24,26 +26,27 @@ $(function() {
 		$(".calc-sum-total").css("display", "none"); //Убираем знак ?
 	}
 
-	function showPrompt() { //Показать поле ввода чисел
-		a = +prompt('Введите первую цифру', 7); //Ввод первого числа
-		while(isNaN(a) || a < 0) //Проверка на число
-			a = +prompt('Введите первую цифру', 7); 
-
-		b = +prompt('Введите вторую цифру', 4); //Ввод второго числа
-		while(isNaN(b) || b < 0) //Проверка на число
-			b = +prompt('Введите вторую цифру', 4);
+	function getRandomNum() { //Получить случайное число
+		return Math.floor(Math.random() * (maxWidth - minWidth)) + minWidth;
 	}
+
+
 
 
 	//Начало выполнения программы
-	showPrompt();
+
+	a = getRandomNum(); //генерируем число a
+	b = getRandomNum(); //генерируем число b
 
 	total = a + b; //Суммируем числа
-	if(total > ruleWidth){
-		alert("Программа умеет суммировать только до " + ruleWidth);
-		showPrompt();
-	}
 
+	if(total >= ruleWidth){
+		while(total >= ruleWidth) {
+			a = getRandomNum(); //генерируем число a
+			b = getRandomNum(); //генерируем число b
+			total = a + b;
+		}
+	}
 
 	calcFirst.text(a); //Вывод первого числа
 	calcSec.text(b); //Вывод второго числа
