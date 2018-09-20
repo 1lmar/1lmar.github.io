@@ -27,7 +27,7 @@ $(function() {
 	}
 
 	function getRandomNum() { //Получить случайное число
-		return Math.floor(Math.random() * (maxWidth - minWidth)) + minWidth;
+		return Math.floor(Math.random() * (maxWidth - minWidth + 1)) + minWidth;
 	}
 
 
