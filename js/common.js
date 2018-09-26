@@ -1,80 +1,129 @@
 $(function() {
 
-	var a = getRandomNum(6, 9); //генерируем число a
-	var b = getRandomNum(11, 14) - a; //генерируем число b
-	var total = a + b; //Суммируем числа
+	$('.mfp-callback').magnificPopup({
+		type: 'inline',
 
-	var ruleWidth = 20; //размерность линейки
+		fixedContentPos: false,
+		fixedBgPos: true,
 
-	var lineWidth = 39; //Ширина 1см = 39px
-	var calcFirst = $("#calcFirst"); //Первая цифра
-	var calcSec = $("#calcSec"); //Вторая цифра
-	var firstLine = $(".line-first"); //Первая линия
-	var secLine = $(".line-sec"); //вторая линия
+		overflowY: 'auto',
 
-	function getRandomNum(minWidth, maxWidth) { //Генерация случайного числа
-		return Math.floor(Math.random() * (maxWidth - minWidth + 1)) + minWidth;
-	}
+		closeBtnInside: true,
+		preloader: false,
 
-	function drawLine(num, item){ //Функция рисующая линию
-		return item.css('width', (num * lineWidth) + 'px');
-	}
-
-	function drawSecLine() { //Функция чертит вторую линию
-		drawLine(b, secLine); //чертим линию
-		$('#secNum').fadeIn(); //Показываем инпут
-	}
-
-	function totalCalc() { //функция выводящая инпут ответа
-		$("#totalCalc").fadeIn(); //показываем инпут
-		$(".calc-sum-total").css("display", "none"); //Убираем знак ?
-	}
-
-	//Начало выполнения программы
-
-	calcFirst.text(a); //Вывод первого числа
-	calcSec.text(b); //Вывод второго числа
-	
-	drawLine(a, firstLine); //Рисуем первую линию
-
-	$('#firstNum').on('keyup', function() { //Проверка первого числа
-		if(this.value != a){
-			$(this).css("color", "red");
-			$(calcFirst).css("background-color", "orange");
-		} else{
-			$(this).css("display", "none");
-			$("#firstNumSpan").text(this.value);
-			$(calcFirst).css("background-color", "transparent");
-
-			//Рисуем вторую линию
-			drawSecLine();
-		}
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
 	});
 
-	$('#secNum').on('keyup', function() { //Проверка второго числа
-		if(this.value != b){
-			$(this).css("color", "red");
-			$(calcSec).css("background-color", "orange");
-		} else{
-			$(this).css("display", "none");
-			$("#secNumSpan").text(this.value);
-			$(calcSec).css("background-color", "transparent");
+	var name = $('#name');
 
-			//Вводим ответ
-			totalCalc();
+	var phonePattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+	var phone = $('#phone');
+
+	var emailPattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+	var email = $('#email');
+
+	function showBtn() {
+		if(name.hasClass('correct') && phone.hasClass('correct') && email.hasClass('correct'))
+			$('#send').fadeIn();
+	};
+
+	function validName(){
+		if(name.val() != ''){
+			name.removeClass('error');
+			name.addClass('correct');
+			$('.valid-name').text('');
+			showBtn();
+		} else {
+			$('.valid-name').text('Поле имя не должно быть пустым!');
+			name.removeClass('correct');
+			name.addClass('error');
 		}
+	};
+
+	function validPhone(){
+		if(phone.val() != ''){
+			if(phone.val().search(phonePattern) == 0) {
+				phone.removeClass('error');
+				phone.addClass('correct');
+				$('.valid-phone').text('');
+				showBtn();
+			} else {
+				$('.valid-phone').text('Поле телефон введено не корректно!');
+				phone.removeClass('correct');
+				phone.addClass('error');
+			}
+		} else {
+			$('.valid-phone').text('Поле телефон не должно быть пустым!');
+			phone.removeClass('correct');
+			phone.addClass('error');
+		}
+	};
+
+	function validMail(){
+		if(email.val() != ''){
+			if(email.val().search(emailPattern) == 0) {
+				email.removeClass('error');
+				email.addClass('correct');
+				$('.valid-email').text('');
+				showBtn();
+			} else {
+				$('.valid-email').text('Поле e-mail введено не корректно!');
+				email.removeClass('correct');
+				email.addClass('error');
+			}
+		} else {
+			$('.valid-email').text('Поле e-mail не должно быть пустым!');
+			email.removeClass('correct');
+			email.addClass('error');
+		}
+	};
+
+	function clearInput(inputName) {
+		inputName.val("");
+		inputName.removeClass('error');
+		inputName.removeClass('correct');
+	}
+
+	name.keyup(validName);
+
+	phone.keyup(validPhone);
+
+	email.keyup(validMail);
+
+	$('#send').click(function(){
+
+		var valName = name.val();
+		var valPhone = phone.val();
+		var valMail = email.val();
+
+		var tbl = '<table class="table table-striped">';
+
+		tbl += '<tr> <th scope="row">Имя: </th> <td>' + valName + '</td> </tr>';
+		tbl += '<tr> <th scope="row">Телефон: </th> <td>' + valPhone + '</td> </tr>';
+		tbl += '<tr> <th scope="row">E-mail: </th> <td>' + valMail + '</td> </tr>';
+
+		tbl += "</table>";
+
+		$(".table-total").html(tbl);
+
+		$('.btn-open').css({"display":"none"});
+		$('.btn-close').fadeIn();
+
+		$.magnificPopup.close();
 	});
 
-	$("#totalCalc").on('keyup', function() { //Проверка суммы
-		if(this.value != total){
-			$(this).css("color", "red");
-		} else{
-			$(this).css("display", "none");
-			$(".calc-sum-total").fadeIn().text(this.value);
+	$('.btn-close').click(function(){
 
-			$(".succes").text("Отлично!");
-		}
+		clearInput(name);
+		clearInput(phone);
+		clearInput(email);
+
+		$(".table-total").html("");
+		$('.btn-close').css({"display":"none"});
+		$('.btn-open').fadeIn();
+
 	});
-
 
 });

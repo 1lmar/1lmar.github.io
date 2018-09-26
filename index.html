@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Uchi.ru</title>
+	<title>Веб-разработчик - Выполненное тестовое задание</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,36 +28,46 @@
 
 <body>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="wrap">
-					<div class="calc-sum">
-						<span id="calcFirst" class="calc-sum-num">?</span>
-						<span class="calc-sum-plus">+</span>
-						<span id="calcSec" class="calc-sum-num">?</span>
-						<span>=</span>
-						<input type="text" id="totalCalc">
-						<span class="calc-sum-total">?</span>
-						<div class="succes"></div>
-					</div>
-					<div class="rule">
-						<div class="line-wrap">
-							<div class="line-first line" style="width: 0;">
-								<input type="text" id="firstNum" class="line-num">
-								<span id="firstNumSpan"></span>
-							</div>
-							<div class="line-sec line" style="width: 0;">
-								<input type="text" id="secNum" class="line-num">
-								<span id="secNumSpan"></span>
-							</div>
-						</div>
-						<img src="img/sprite.png" alt="">
+	<!-- Custom HTML -->
+
+	<div class="main-wrap">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<div class="inner-wrap">
+						<div class="table-responsive"><div class="table-total"></div></div>
+						<a href="#mfp-callback" class="btn btn-open mfp-callback">Открыть</a><a href="#" class="btn-close btn">Сбросить</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div id="mfp-callback" class="zoom-anim-dialog mfp-hide">
+			<h3>Заплоните форму</h3>
+			<form id="callback-form">
+
+				<div class="col_full">
+					<label for="">Ваше имя</label>
+					<input id="name" class="" type="text" name="name" value="" AUTOCOMPLETE="off">
+					<span class="valid valid-name"></span>
+				</div>
+				<div class="col_full">
+					<label for="">Ваш телефон</label>
+					<input id="phone" class="" type="text" name="phone" value="" AUTOCOMPLETE="off">
+					<span class="valid valid-phone"></span>
+				</div>
+				<div class="col_full">
+					<label for="">Ваш email</label>
+					<input id="email" class="" type="text" name="email" value="" AUTOCOMPLETE="off">
+					<span class="valid valid-email"></span>
+				</div>
+				<div class="col_full"><br>
+					<a href="#" class="btn hidden" id="send">Отправить</a>
+				</div>
+
+			</form>
+		</div>
 
 	<script src="js/scripts.min.js"></script>
 
