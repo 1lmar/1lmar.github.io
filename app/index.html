@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Flatstack test task</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div class="main-page">
+		<div class="main-page__header">
+			<header class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<div class="header-logo"><i class="fa fa-code" aria-hidden="true"></i> Front-end Developer Test Task</div>
+						</div>
+						<div class="col-4">
+							<a href="#" class="header-cart">
+								<span class="header-cart__text">cart</span>
+								<span class="header-cart__icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>3</span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="main-page__section_order">
+			<div class="container">
+				<section class="section-order">
+					<div class="row">
+						<div class="col-sm-7">
+							<div class="section-order__steps">
+								<ul class="order-steps__tabs">
+									<li id="order-tab-1" class="order-steps__tab current"><a href="#">Shipping</a></li>
+									<li id="order-tab-2" class="order-steps__tab"><a href="#">Billing</a></li>
+									<li id="order-tab-3" class="order-steps__tab"><a href="#">Payment</a></li>
+								</ul>
+								<div class="order-steps__items">
+									<form id="form">
+										<div id="order-steps-1" class="order-steps__item active">
+											<div class="order-steps__item_title">
+												<h2>Shipping Info</h2>
+											</div>
+											<div class="form-group">
+												<label>Recipient</label>
+												<input type="text" class="form-control" id="fullName" name="fullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-7">
+													<input type="text" class="form-control" id="daytimePhone" name="daytimePhone" data-toggle="tooltip" title="Please enter phone" placeholder="Daytime Phone">
+												</div>
+												<div class="col-md-5">
+													<div class="form-input__descr">
+														<span>For delivery <br> questions only</span>
+													</div>
+												</div>
+											</div>
+											<br>
+											<div class="form-group">
+												<label>Address</label>
+												<input type="text" class="form-control" id="streetAddress" name="streetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="building" name="building" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+											</div>
+											<div class="form-group form-group__city">
+												<input type="text" class="form-control" id="city" name="city" data-toggle="tooltip" title="Please enter City" placeholder="City">
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-7">
+													<select class="form-control country-list selectpicker" data-live-search="true" id="country" name="country" data-toggle="tooltip" title="Please enter Country">
+										      </select>
+												</div>
+												<div class="form-group col-md-5">
+													<input type="text" class="form-control" id="zip" name="zip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
+												</div>
+											</div>
+											<br>
+											<a href="#next" data-next="1" class="btn next">Continue</a>
+										</div>
+
+										<div id="order-steps-2" class="order-steps__item">
+											<div class="order-steps__item_title same-as-shiping">
+												<h2>Billing Information</h2>
+												<a href="#" id="sameAsShipping">Same as shipping</a>
+											</div>
+											<div class="form-group">
+												<label>Billing Contact</label>
+												<input type="text" class="form-control" id="billFullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="email" data-toggle="tooltip" title="Please enter Email Address" placeholder="Email Address">
+											</div>
+											<br>
+											<div class="form-group">
+												<label>Billing Address</label>
+												<input type="text" class="form-control" id="billStreetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="billBuilding" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+											</div>
+											<div class="form-group form-group__city">
+												<input type="text" class="form-control" id="billCity" data-toggle="tooltip" title="Please enter City" placeholder="City">
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-7">
+													<select class="form-control country-list selectpicker" data-live-search="true" id="billCountry" data-toggle="tooltip" title="Please enter Country">
+										      </select>
+												</div>
+												<div class="form-group col-md-5">
+													<input type="text" class="form-control" id="billZip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
+												</div>
+											</div>
+											<br>
+											<a href="#next" data-next="2" class="btn next">Continue</a>
+										</div>
+
+										<div id="order-steps-3" class="order-steps__item">
+											<div class="order-steps__item_title">
+												<h2>Payment</h2>
+												<p><i class="fa fa-lock lock-icon" aria-hidden="true"></i> This is a secure 128-bit SSL encrypted payment</p>
+											</div>
+											<div class="form-group">
+												<label>Cardholder Name</label>
+												<input type="text" class="form-control" id="cardholderName" data-toggle="tooltip" title="Please enter cardholder name" placeholder="Name as it appears on your card">
+											</div>
+											<div class="form-group ">
+												<label>Card Number</label>
+												<div class="card-input">
+													<input type="text" class="form-control" id="cardNumber" data-toggle="tooltip" title="Please enter card number" placeholder="XXXX XXXX XXXX XXXX XXXX">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-4">
+													<label>Expire Date</label>
+													<input type="text" class="form-control" id="expireDate" data-toggle="tooltip" title="Please enter expire date" placeholder="MM/YY">
+												</div>
+												<div class="form-group col-md-4">
+													<label>Security Code</label>
+													<input type="text" class="form-control" id="securityCode" data-toggle="tooltip" title="Please enter security code" placeholder="">
+												</div>
+											</div>
+											<br>
+											<a href="#next" data-next="3" class="btn next">Pay Securely</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="section-order__sum">
+								<div class="order-sum__title">
+									<h2>Order Summary</h2>
+									<a href="#" class="order-sum__edit">edit order</a>
+								</div>
+								<div class="order-sum__goods">
+									<div class="order-sum__good">
+										<div class="order-good__details">
+											<div class="order-good__img">
+												<img src="img/1.jpg" class="img-responsive" alt="">
+											</div>
+											<div class="order-good__descr">
+												<h3>The chelsea Boot</h3>
+												<p>Black</p>
+												<p>Quantity: 1</p>
+											</div>
+										</div>
+										<div class="order-good__price"><span>$235</span></div>
+									</div>
+									<div class="order-sum__good">
+										<div class="order-good__details">
+											<div class="order-good__img">
+												<img src="img/2.jpg" class="img-responsive" alt="">
+											</div>
+											<div class="order-good__descr">
+												<h3>The Twill Snap Backpack</h3>
+												<p>Reverse Denim + Brown leather</p>
+												<p>Quantity: 1</p>
+											</div>
+										</div>
+										<div class="order-good__price"><span>$65</span></div>
+									</div>
+									<div class="order-sum__good">
+										<div class="order-good__details">
+											<div class="order-good__img">
+												<img src="img/3.jpg" class="img-responsive" alt="">
+											</div>
+											<div class="order-good__descr">
+												<h3>The Twill Zip Tote</h3>
+												<p>Reverse Denim + Black leather</p>
+												<p>Quantity: 1</p>
+											</div>
+										</div>
+										<div class="order-good__price"><span>$48</span></div>
+									</div>
+								</div>
+								<div class="order-sum__calc">
+									<table>
+										<tr>
+											<td>Subtotal</td>
+											<td>$398</td>
+										</tr>
+										<tr>
+											<td>Shipping</td>
+											<td>free</td>
+										</tr>
+										<tr>
+											<td>Taxes</td>
+											<td>$12.2</td>
+										</tr>
+									</table>
+								</div>
+								<div class="order-sum__total">
+									<div class="total-sum__text">Total</div>
+									<div class="total-sum__price">$410.12</div>
+								</div>
+								<div class="order-sum__conditions">All purchases are subject to our <a href="#">Terms and Conditions</a></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

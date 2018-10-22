@@ -1,0 +1,373 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: #E7EAF2
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+		&::placeholder
+			color: $text
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+li, ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+input.form-control
+	transition: all .25s ease
+	&:focus
+		box-shadow: 0px 0px 7px rgba(0,0,0,.2)
+		border-color: #ced4da
+
+select.invalid, input.invalid, select.invalid + button.btn
+	background-color: rgba(255, 0, 0, .04)
+	&:focus
+		background-color: rgba(255, 0, 0, .04)
+
+.tooltip
+	.tooltip-inner
+		background-color: #fff
+		color: red
+		box-shadow: 0px 3px 10px rgba(0,0,0,.2)
+		max-width: 100%
+	.arrow
+		&::before
+			border-top-color: #fff
+
+.btn
+	background-color: $accent
+	color: #fff
+	padding: 12px 50px
+	border-radius: 5px
+	transition: all .25s ease
+	&:hover, &:active, &:focus
+		background-color: darken($accent, 5%)
+		color: #fff
+		text-decoration: none
+
+.main-page
+	&__header
+		background-color: #fff
+		border-bottom: 1px solid $pink
+		padding: 10px 0
+	&__section_order
+		margin-top: 60px
+		padding-bottom: 60px
+
+.header
+	&-logo
+		color: $accent
+		font-size: 20px
+		font-weight: 200
+		font-family: "SegoeUILight", sans-serif
+		.fa
+			color: $pink
+			font-size: 24px
+	&-cart
+		float: right
+		color: $pink
+		&:hover, &:active, &:focus
+			text-decoration: none
+			color: $pink
+			outline: none
+			text-decoration: none
+		&__text
+			color: darken($pink, 8%)
+		&__icon
+			font-size: 20px
+			position: relative
+			span
+				position: absolute
+				top: -4px
+				right: -7px
+				width: 14px
+				height: 14px
+				background-color: red
+				border-radius: 10em
+				z-index: 99
+				font-size: 10px
+				color: #fff
+				text-align: center
+				line-height: 14px
+
+.section-order
+	background-color: #fff
+	box-shadow: 1px 5px 15px rgba(0,0,0,.2)
+	border-radius: 5px
+	overflow: hidden
+	&__sum
+		background-color: #F2F3F7
+		padding: 30px 15px 80px
+		position: relative
+		height: 100%
+		width: 100%
+	&__steps
+		padding: 30px 30px 60px
+.order-good__img
+	max-width: 70px
+.order-steps
+	&__tabs
+		margin-bottom: 30px
+	&__tab.current
+		a
+			color: $accent
+	&__item
+		display: none
+		&_title
+			margin-bottom: 30px
+			h2
+				color: $accent
+				font-family: "SegoeUILight", sans-serif
+				font-size: 26px
+	&__item.active
+		display: block
+	&__tab
+		display: inline-block
+		position: relative
+		margin-right: 20px
+		padding-right: 20px
+		&:last-child
+			padding: 0
+			margin: 0
+			&::after
+				display: none
+		&::after
+			content: '\f105'
+			position: absolute
+			right: -7px
+			top: -10px
+			font-size: 30px
+			font-family: FontAwesome
+			color: #eee
+		a
+			color: $text
+			font-size: 15px
+			&:hover, &:active, &:focus
+				text-decoration: none
+				outline: none
+				cursor: default
+
+.order-sum
+	&__title
+		text-align: right
+		margin-bottom: 30px
+		h2
+			font-family: "SegoeUILight", sans-serif
+			color: $accent
+			font-size: 22px
+			float: left
+	&__edit
+		color: $text
+		text-decoration: underline
+		font-size: 15px
+		line-height: 34px
+		&:hover, &:active, &:focus
+			color: $accent
+	&__goods
+		display: table
+		width: 100%
+		border-collapse: collapse
+	&__good
+		display: table-row
+		border-bottom: 1px solid #ddd
+		&:first-child
+			.order-good__details, .order-good__price
+				padding: 0
+	&__calc
+		font-size: 14px
+		margin-top: 15px
+		padding-bottom: 15px
+		border-bottom: 1px solid #ddd
+		table
+			width: 100%
+			td:last-child
+				text-align: right
+
+.order-good
+	&__details, &__price
+		display: table-cell
+		padding-top: 15px
+	&__price
+		text-align: right
+	&__img
+		float: left
+		margin-right: 12px
+		margin-bottom: 12px
+		border: 1px solid #ddd
+		border-radius: 5px
+		overflow: hidden
+	&__descr
+		h3
+			font-size: 16px
+			font-weight: normal
+			margin: 0
+		p
+			font-size: 12px
+			color: #000
+			margin: 0
+
+.order-sum__total
+	color: $accent
+	font-weight: bold
+	display: table
+	width: 100%
+	margin-top: 15px
+.total-sum
+	&__text, &__price
+		display: table-cell
+	&__price
+		text-align: right
+
+.order-sum__conditions
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 100%
+	padding: 0 30px 30px
+	text-align: center
+	font-size: 12px
+	a
+		color: $text
+		text-decoration: underline
+
+.form-group
+	label
+		color: $accent
+	select
+		cursor: pointer
+.form-input__descr
+	font-size: 14px
+	line-height: 1.3
+.form-group__city
+	position: relative
+	input
+		padding-right: 35px
+	&::after
+		content: '\f14e'
+		position: absolute
+		top: 0
+		right: 13px
+		font-size: 24px
+		font-family: "FontAwesome"
+		color: #888
+
+.bootstrap-select > .dropdown-toggle
+	border: 1px solid #ced4da
+	background-color: #fff
+	padding: .375rem .75rem
+	font-size: 1rem
+	line-height: 1.5
+	color: #495057
+	outline: none
+	cursor: pointer
+
+.bs-searchbox
+	position: relative
+	&::after
+		content: '\f002'
+		position: absolute
+		right: 20px
+		top: 9px
+		font-family: FontAwesome
+		color: $text
+	input.form-control
+		padding-right: 30px
+
+.dropdown-item.active, .dropdown-item:active
+	background-color: #eee
+	color: #212529
+
+.same-as-shiping
+	text-align: right
+	h2
+		float: left
+#sameAsShipping
+	color: $accent
+	text-decoration: underline
+	transition: all .25s ease
+	&:hover, &:active, &:focus
+		text-decoration: none
+
+.lock-icon
+	color: green
+	font-size: 20px
+
+.card-input
+	position: relative
+	&.visa-card
+		&::after
+			content: ''
+			position: absolute
+			right: 15px
+			top: 12px
+			width: 50px
+			height: 16px
+			background-image: url(../img/visa.png)
+			background-repeat: no-repeat
+			background-size: cover
+		input
+			padding-right: 80px
+
+.order-completed
+	color: #333
+	p
+		a
+			color: $accent
+			text-decoration: underline
+			&:hover, &:active, &:focus
+				color: $accent
+				text-decoration: none
+	h2
+		color: $accent
+		font-family: "SegoeUILight", sans-serif
+		font-size: 26px
+
+.order-sum-completed
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(255,255,255,.5)
+.cart-icon-ordered
+	span
+		display: none
+
+
+@import "media" // Always at the end
