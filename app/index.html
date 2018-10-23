@@ -53,9 +53,9 @@
 						<div class="col-sm-7">
 							<div class="section-order__steps">
 								<ul class="order-steps__tabs">
-									<li id="order-tab-1" class="order-steps__tab current"><a href="#">Shipping</a></li>
-									<li id="order-tab-2" class="order-steps__tab"><a href="#">Billing</a></li>
-									<li id="order-tab-3" class="order-steps__tab"><a href="#">Payment</a></li>
+									<li id="order-tab-1" data-tab="1" class="order-steps__tab current disable"><a href="javascript:void(0);">Shipping</a></li>
+									<li id="order-tab-2" data-tab="2" class="order-steps__tab disable"><a href="javascript:void(0);">Billing</a></li>
+									<li id="order-tab-3" data-tab="3" class="order-steps__tab disable"><a href="javascript:void(0);">Payment</a></li>
 								</ul>
 								<div class="order-steps__items">
 									<form id="form">
@@ -65,11 +65,11 @@
 											</div>
 											<div class="form-group">
 												<label>Recipient</label>
-												<input type="text" class="form-control" id="fullName" name="fullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
+												<input type="text" class="form-control" autocomplete="off" id="fullName" name="fullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
 											</div>
 											<div class="form-row">
 												<div class="form-group col-md-7">
-													<input type="text" class="form-control" id="daytimePhone" name="daytimePhone" data-toggle="tooltip" title="Please enter phone" placeholder="Daytime Phone">
+													<input type="text" class="form-control" autocomplete="off" id="daytimePhone" name="daytimePhone" data-toggle="tooltip" title="Please enter phone" placeholder="Daytime Phone">
 												</div>
 												<div class="col-md-5">
 													<div class="form-input__descr">
@@ -80,13 +80,13 @@
 											<br>
 											<div class="form-group">
 												<label>Address</label>
-												<input type="text" class="form-control" id="streetAddress" name="streetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
+												<input type="text" class="form-control" autocomplete="off" id="streetAddress" name="streetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" id="building" name="building" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+												<input type="text" class="form-control" autocomplete="off" id="building" name="building" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
 											</div>
 											<div class="form-group form-group__city">
-												<input type="text" class="form-control" id="city" name="city" data-toggle="tooltip" title="Please enter City" placeholder="City">
+												<input type="text" class="form-control" autocomplete="off" id="city" name="city" data-toggle="tooltip" title="Please enter City" placeholder="City">
 											</div>
 											<div class="form-row">
 												<div class="form-group col-md-7">
@@ -94,7 +94,7 @@
 										      </select>
 												</div>
 												<div class="form-group col-md-5">
-													<input type="text" class="form-control" id="zip" name="zip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
+													<input type="text" class="form-control" autocomplete="off" id="zip" name="zip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
 												</div>
 											</div>
 											<br>
@@ -108,21 +108,21 @@
 											</div>
 											<div class="form-group">
 												<label>Billing Contact</label>
-												<input type="text" class="form-control" id="billFullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
+												<input type="text" class="form-control" autocomplete="off" id="billFullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" id="email" data-toggle="tooltip" title="Please enter Email Address" placeholder="Email Address">
+												<input type="text" class="form-control" autocomplete="off" id="email" data-toggle="tooltip" title="Please enter Email Address" placeholder="Email Address">
 											</div>
 											<br>
 											<div class="form-group">
 												<label>Billing Address</label>
-												<input type="text" class="form-control" id="billStreetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
+												<input type="text" class="form-control" autocomplete="off" id="billStreetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" id="billBuilding" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+												<input type="text" class="form-control" autocomplete="off" id="billBuilding" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
 											</div>
 											<div class="form-group form-group__city">
-												<input type="text" class="form-control" id="billCity" data-toggle="tooltip" title="Please enter City" placeholder="City">
+												<input type="text" class="form-control" autocomplete="off" id="billCity" data-toggle="tooltip" title="Please enter City" placeholder="City">
 											</div>
 											<div class="form-row">
 												<div class="form-group col-md-7">
@@ -130,7 +130,7 @@
 										      </select>
 												</div>
 												<div class="form-group col-md-5">
-													<input type="text" class="form-control" id="billZip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
+													<input type="text" class="form-control" autocomplete="off" id="billZip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
 												</div>
 											</div>
 											<br>
@@ -144,22 +144,22 @@
 											</div>
 											<div class="form-group">
 												<label>Cardholder Name</label>
-												<input type="text" class="form-control" id="cardholderName" data-toggle="tooltip" title="Please enter cardholder name" placeholder="Name as it appears on your card">
+												<input type="text" class="form-control" autocomplete="off" id="cardholderName" data-toggle="tooltip" title="Please enter cardholder name" placeholder="Name as it appears on your card">
 											</div>
 											<div class="form-group ">
 												<label>Card Number</label>
 												<div class="card-input">
-													<input type="text" class="form-control" id="cardNumber" data-toggle="tooltip" title="Please enter card number" placeholder="XXXX XXXX XXXX XXXX XXXX">
+													<input type="text" class="form-control" autocomplete="off" id="cardNumber" data-toggle="tooltip" title="Please enter card number" placeholder="XXXX XXXX XXXX XXXX XXXX">
 												</div>
 											</div>
 											<div class="form-row">
 												<div class="form-group col-md-4">
 													<label>Expire Date</label>
-													<input type="text" class="form-control" id="expireDate" data-toggle="tooltip" title="Please enter expire date" placeholder="MM/YY">
+													<input type="text" class="form-control" autocomplete="off" id="expireDate" data-toggle="tooltip" title="Please enter expire date" placeholder="MM/YY">
 												</div>
 												<div class="form-group col-md-4">
 													<label>Security Code</label>
-													<input type="text" class="form-control" id="securityCode" data-toggle="tooltip" title="Please enter security code" placeholder="">
+													<input type="text" class="form-control" autocomplete="off" id="securityCode" data-toggle="tooltip" title="Please enter security code" placeholder="">
 												</div>
 											</div>
 											<br>

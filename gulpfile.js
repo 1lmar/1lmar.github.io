@@ -43,6 +43,7 @@ gulp.task('js', function() {
 		'app/js/countries.js',
 		'app/js/validator.js',
 		'app/js/autofills.js',
+		'app/js/steps.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

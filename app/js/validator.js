@@ -18,7 +18,6 @@ Validation.prototype.validate = function(rules) {
   }
 
   if(this.errorsList == null) { //if error list emty
-    console.log(this.data);
     return this.data; //return data
   } else {
     this.showErrors(); //call method for show errors

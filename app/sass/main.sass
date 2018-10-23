@@ -46,6 +46,9 @@ li, ul
 	margin: 0
 	padding: 0
 
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+	background-color: #fff!important
+
 input.form-control
 	transition: all .25s ease
 	&:focus
@@ -144,6 +147,7 @@ select.invalid, input.invalid, select.invalid + button.btn
 	&__tab.current
 		a
 			color: $accent
+			text-decoration: none
 	&__item
 		display: none
 		&_title
@@ -175,10 +179,16 @@ select.invalid, input.invalid, select.invalid + button.btn
 		a
 			color: $text
 			font-size: 15px
+			text-decoration: underline
 			&:hover, &:active, &:focus
 				text-decoration: none
-				outline: none
-				cursor: default
+.order-steps__tab.disable
+	a
+		text-decoration: none
+		&:hover, &:active, &:focus
+			text-decoration: none
+			outline: none
+			cursor: default
 
 .order-sum
 	&__title

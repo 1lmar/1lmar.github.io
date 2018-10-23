@@ -18,6 +18,7 @@ function sameAsShipping(shippingInputs) { //fill input same as shipping
       }
       if(field == 'country'){
         $('#billCountry').val(fieldValue);
+        $('.selectpicker').selectpicker('refresh');
       }
       if(field == 'zip'){
         $('#billZip').val(fieldValue);
