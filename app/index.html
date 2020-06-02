@@ -6,18 +6,18 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Flatstack test task</title>
+	<title>Approach</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+	
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
-
+	
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
@@ -28,222 +28,180 @@
 
 <body>
 
-	<div class="main-page">
-		<div class="main-page__header">
-			<header class="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-8">
-							<div class="header-logo"><i class="fa fa-code" aria-hidden="true"></i> Front-end Developer Test Task</div>
-						</div>
-						<div class="col-4">
-							<a href="#" class="header-cart">
-								<span class="header-cart__text">cart</span>
-								<span class="header-cart__icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>3</span></span>
-							</a>
-						</div>
+	<header class="main-head">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-6">
+					<div class="main-head__logo">
+						<a href="index.html"><img src="img/logo.svg" alt=""> bboss.io</a>
 					</div>
 				</div>
-			</header>
+				<div class="col-md-10 col-6">
+					<div class="main-head__menu--toggle">
+						<div class="toggle-mnu"><span></span></div>
+					</div>
+					<div class="main-head__menu">
+						<ul>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Skills</a></li>
+							<li><a href="#">Team as a service</a></li>
+							<li><a href="#">Industries</a></li>
+							<li><a href="#">Case studies</a></li>
+							<li class="active"><a href="#">Approach</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="main-page__section_order">
-			<div class="container">
-				<section class="section-order">
-					<div class="row">
-						<div class="col-sm-7">
-							<div class="section-order__steps">
-								<ul class="order-steps__tabs">
-									<li id="order-tab-1" data-tab="1" class="order-steps__tab current disable"><a href="javascript:void(0);">Shipping</a></li>
-									<li id="order-tab-2" data-tab="2" class="order-steps__tab disable"><a href="javascript:void(0);">Billing</a></li>
-									<li id="order-tab-3" data-tab="3" class="order-steps__tab disable"><a href="javascript:void(0);">Payment</a></li>
-								</ul>
-								<div class="order-steps__items">
-									<form id="form">
-										<div id="order-steps-1" class="order-steps__item active">
-											<div class="order-steps__item_title">
-												<h2>Shipping Info</h2>
-											</div>
-											<div class="form-group">
-												<label>Recipient</label>
-												<input type="text" class="form-control" autocomplete="off" id="fullName" name="fullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
-											</div>
-											<div class="form-row">
-												<div class="form-group col-md-7">
-													<input type="text" class="form-control" autocomplete="off" id="daytimePhone" name="daytimePhone" data-toggle="tooltip" title="Please enter phone" placeholder="Daytime Phone">
-												</div>
-												<div class="col-md-5">
-													<div class="form-input__descr">
-														<span>For delivery <br> questions only</span>
-													</div>
-												</div>
-											</div>
-											<br>
-											<div class="form-group">
-												<label>Address</label>
-												<input type="text" class="form-control" autocomplete="off" id="streetAddress" name="streetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control" autocomplete="off" id="building" name="building" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
-											</div>
-											<div class="form-group form-group__city">
-												<input type="text" class="form-control" autocomplete="off" id="city" name="city" data-toggle="tooltip" title="Please enter City" placeholder="City">
-											</div>
-											<div class="form-row">
-												<div class="form-group col-md-7">
-													<select class="form-control country-list selectpicker" data-live-search="true" id="country" name="country" data-toggle="tooltip" title="Please enter Country">
-										      </select>
-												</div>
-												<div class="form-group col-md-5">
-													<input type="text" class="form-control" autocomplete="off" id="zip" name="zip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
-												</div>
-											</div>
-											<br>
-											<a href="#next" data-next="1" class="btn next">Continue</a>
-										</div>
+	</header>
 
-										<div id="order-steps-2" class="order-steps__item">
-											<div class="order-steps__item_title same-as-shiping">
-												<h2>Billing Information</h2>
-												<a href="#" id="sameAsShipping">Same as shipping</a>
-											</div>
-											<div class="form-group">
-												<label>Billing Contact</label>
-												<input type="text" class="form-control" autocomplete="off" id="billFullName" data-toggle="tooltip" title="Please enter recipient full name" placeholder="Full Name">
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control" autocomplete="off" id="email" data-toggle="tooltip" title="Please enter Email Address" placeholder="Email Address">
-											</div>
-											<br>
-											<div class="form-group">
-												<label>Billing Address</label>
-												<input type="text" class="form-control" autocomplete="off" id="billStreetAddress" data-toggle="tooltip" title="Please enter Street Address" placeholder="Street Address">
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control" autocomplete="off" id="billBuilding" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
-											</div>
-											<div class="form-group form-group__city">
-												<input type="text" class="form-control" autocomplete="off" id="billCity" data-toggle="tooltip" title="Please enter City" placeholder="City">
-											</div>
-											<div class="form-row">
-												<div class="form-group col-md-7">
-													<select class="form-control country-list selectpicker" data-live-search="true" id="billCountry" data-toggle="tooltip" title="Please enter Country">
-										      </select>
-												</div>
-												<div class="form-group col-md-5">
-													<input type="text" class="form-control" autocomplete="off" id="billZip" data-toggle="tooltip" title="Please enter ZIP" placeholder="ZIP">
-												</div>
-											</div>
-											<br>
-											<a href="#next" data-next="2" class="btn next">Continue</a>
-										</div>
+	<section class="s-approach" style="background-image: url(img/approach-bg.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 col-md-9">
+					<div class="s-approach__desc">
+						<h1>Approach</h1>
+						<p><strong>A crucial feature of our approach is the perception of the client's business as our own.</strong></p>
+						<p>We do not just execute IT development according to the technical requirements - since our team not only has programmers but also experienced marketing specialists, product, and analytics managers. We are ready to understand all the needs fully, delve into each client's business, and offer a solution as profitable as possible in terms of cost and timing.</p>
+						<div class="line"></div>
+						<img src="img/appr-icon-1.svg" alt="">
+						<p>Our developers are always on the "crest of the wave." We adhere to the policy of using only the most effective IT methodologies and modern technologies.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-										<div id="order-steps-3" class="order-steps__item">
-											<div class="order-steps__item_title">
-												<h2>Payment</h2>
-												<p><i class="fa fa-lock lock-icon" aria-hidden="true"></i> This is a secure 128-bit SSL encrypted payment</p>
-											</div>
+	<section class="s-result">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<div class="s-result__img"><img src="img/result.jpg" class="img-responsive" alt=""></div>
+				</div>
+				<div class="col-md-6">
+					<div class="s-result__text">
+						<h2>The result — <br>what is important</h2>
+						<p>Each of our employees feels personal responsibility for the result of his actions - and the final result, in the first place, we consider not the satisfaction of our client, but the user experience that the customers of our client receive from using the solutions developed by us.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-steps">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="s-steps__text">Therefore, in development, we abide by the principle of triple control - any solution passes three stages of testing before it reaches the customer and production:</div>
+				</div>
+				<div class="col-md-9">
+					<div class="s-steps__list">
+
+						<div class="s-steps__item">
+							<div class="s-steps__item--num"><strong>1</strong></div>
+							<div class="s-steps__item--text">
+								<h3>The developer himself</h3>
+								<p>Each developer necessarily performs automatic tests for any element of the application that he creates</p>
+							</div>
+						</div>
+
+						<div class="s-steps__item">
+							<div class="s-steps__item--num"><strong>2</strong></div>
+							<div class="s-steps__item--text">
+								<h3>The testing department</h3>
+								<p>Testers verify the application for compliance with the technical specifications and the correct operation of all implemented functionality</p>
+							</div>
+						</div>
+
+						<div class="s-steps__item">
+							<div class="s-steps__item--num"><strong>3</strong></div>
+							<div class="s-steps__item--text">
+								<h3>Employees of other departments</h3>
+								<p>We believe that the most effective testing is by third-party users, as they can see and point out all the obscure parts and difficulties during their first-time experience</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="callback">
+						<div class="row no-gutters">
+							<div class="col-md-6">
+								<div class="callback-text">
+									<img src="img/callback.svg" alt="">
+									<p><strong>Our team has more than 30 experienced members who are ready to start executing their mission tomorrow if needed</strong></p>
+									<p>Send us a request, and we will contact you within 24 hours to discuss how we can improve your business.</p>
+									<div class="callback-text__arrow">
+										<img src="img/left-arrow.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="callback-form">
+									<div class="callback-form__title">Call request</div>
+									<form>
 											<div class="form-group">
-												<label>Cardholder Name</label>
-												<input type="text" class="form-control" autocomplete="off" id="cardholderName" data-toggle="tooltip" title="Please enter cardholder name" placeholder="Name as it appears on your card">
+												<label for="name">Name *</label>
+												<input class="form-control form-control-lg" type="text" placeholder="" name="name" required>
 											</div>
-											<div class="form-group ">
-												<label>Card Number</label>
-												<div class="card-input">
-													<input type="text" class="form-control" autocomplete="off" id="cardNumber" data-toggle="tooltip" title="Please enter card number" placeholder="XXXX XXXX XXXX XXXX XXXX">
-												</div>
+
+											<div class="form-group">
+												<label for="name">Phone *</label>
+												<input class="form-control form-control-lg" type="text" placeholder="" name="phone" required>
 											</div>
-											<div class="form-row">
-												<div class="form-group col-md-4">
-													<label>Expire Date</label>
-													<input type="text" class="form-control" autocomplete="off" id="expireDate" data-toggle="tooltip" title="Please enter expire date" placeholder="MM/YY">
-												</div>
-												<div class="form-group col-md-4">
-													<label>Security Code</label>
-													<input type="text" class="form-control" autocomplete="off" id="securityCode" data-toggle="tooltip" title="Please enter security code" placeholder="">
-												</div>
+
+											<div class="form-group">
+												<label for="name">Email <span>Optional</span></label>
+												<input class="form-control form-control-lg" type="text" placeholder="" name="email">
 											</div>
-											<br>
-											<a href="#next" data-next="3" class="btn next">Pay Securely</a>
-										</div>
+
+											<div class="callback-form__btn">
+												<button class="btn btn-form">Send request</button>
+											</div>
+
 									</form>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-5">
-							<div class="section-order__sum">
-								<div class="order-sum__title">
-									<h2>Order Summary</h2>
-									<a href="#" class="order-sum__edit">edit order</a>
-								</div>
-								<div class="order-sum__goods">
-									<div class="order-sum__good">
-										<div class="order-good__details">
-											<div class="order-good__img">
-												<img src="img/1.jpg" class="img-responsive" alt="">
-											</div>
-											<div class="order-good__descr">
-												<h3>The chelsea Boot</h3>
-												<p>Black</p>
-												<p>Quantity: 1</p>
-											</div>
-										</div>
-										<div class="order-good__price"><span>$235</span></div>
-									</div>
-									<div class="order-sum__good">
-										<div class="order-good__details">
-											<div class="order-good__img">
-												<img src="img/2.jpg" class="img-responsive" alt="">
-											</div>
-											<div class="order-good__descr">
-												<h3>The Twill Snap Backpack</h3>
-												<p>Reverse Denim + Brown leather</p>
-												<p>Quantity: 1</p>
-											</div>
-										</div>
-										<div class="order-good__price"><span>$65</span></div>
-									</div>
-									<div class="order-sum__good">
-										<div class="order-good__details">
-											<div class="order-good__img">
-												<img src="img/3.jpg" class="img-responsive" alt="">
-											</div>
-											<div class="order-good__descr">
-												<h3>The Twill Zip Tote</h3>
-												<p>Reverse Denim + Black leather</p>
-												<p>Quantity: 1</p>
-											</div>
-										</div>
-										<div class="order-good__price"><span>$48</span></div>
-									</div>
-								</div>
-								<div class="order-sum__calc">
-									<table>
-										<tr>
-											<td>Subtotal</td>
-											<td>$398</td>
-										</tr>
-										<tr>
-											<td>Shipping</td>
-											<td>free</td>
-										</tr>
-										<tr>
-											<td>Taxes</td>
-											<td>$12.2</td>
-										</tr>
-									</table>
-								</div>
-								<div class="order-sum__total">
-									<div class="total-sum__text">Total</div>
-									<div class="total-sum__price">$410.12</div>
-								</div>
-								<div class="order-sum__conditions">All purchases are subject to our <a href="#">Terms and Conditions</a></div>
-							</div>
-						</div>
 					</div>
-				</section>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<footer class="main-foot">
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-md-12">
+					<div class="main-foot__logo">
+						<a href="index.html"><img src="img/logo.svg" alt=""> bboss.io</a>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="main-foot__menu">
+						<ul>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Skills</a></li>
+							<li><a href="#">Team as a service</a></li>
+							<li><a href="#">Industries</a></li>
+							<li><a href="#">Case studies</a></li>
+							<li class="active"><a href="#">Approach</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="main-foot__copy">&copy; bboss.io 2020</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 
 	<script src="js/scripts.min.js"></script>
 
