@@ -1,85 +1,92 @@
-@import "vars"
-@import "fonts"
-@import "libs"
+@import config
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
-body
-	font-size: 1rem
-	min-width: 320px
+.wrapper
+	height: 100%
+	min-height: 100vh
+	width: 100%
+	padding-top: 80px
 	position: relative
-	line-height: 1.5
-	font-weight: 400
-	font-family: $default-font
-	overflow-x: hidden
-	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+	background: rgb(87,98,145)
+	background: radial-gradient(circle, rgba(87,98,145,1) 0%, rgba(30,30,64,1) 53%)
+	display: flex
+	align-items: center
+	overflow: hidden
+	&.small-screen-size
+		padding-top: 0
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
-
-.text-center
-	text-align: center
-
-b, strong
-	font-weight: bold
-
-ul, li
-	padding: 0
-	margin: 0
-	list-style-type: none
-
-h1
-	font-size: 90px
-	line-height: 117px
-	margin-bottom: 40px
-
-h2
-	font-size: 44px
-	line-height: 66px
-	margin-bottom: 16px
-
-h3
-	font-size: 28px
-	line-height: 42px
-
-.main-head__menu--toggle
-	display: none
+.main-head
+	padding: 30px 50px
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 9
+	&__logo
+		a
+			color: #dedede
+			text-transform: uppercase
+			text-decoration: none
+			transition: all .25s ease
+			outline: none
+			&:hover
+				color: #fff
+	&__menu
+		ul
+			display: flex
+			li
+				flex-grow: 1
+				text-align: center
+				a
+					color: #dedede
+					text-decoration: none
+					transition: all .25s ease
+					&:hover
+						color: #fff
+	&__log-in
+		display: flex
+		justify-content: flex-end
+		.log-in
+			min-width: 80px
+			text-decoration: none
+			margin-right: 30px
+			img
+				max-width: 28px
+				margin-top: -3px
+				margin-right: 3px
+			span
+				color: #dedede
+				transition: all .25s ease
+			&:hover
+				span
+					color: #fff
 
 .toggle-mnu 
 	display: inline-block
 	width: 28px
-	height: 28px
-	margin-top: 14px
+	height: 20px
+	margin-top: 5px
+	&:hover
+		span
+			background-color: #fff
+			&:before, &:after
+				background-color: #fff
+				width: 100%
 	span:after, span:before 
 		content: ""
 		position: absolute
-		left: 0
-		top: 9px
+		right: 0
+		top: 8px
 	span:after
-		top: 18px
+		top: 16px
+		width: 22px
+	span:before
+		width: 15px
 	span 
 		position: relative
 		display: block
 	span, span:after, span:before
-		width: 100%
-		height: 2px
-		background-color: #fff
+		height: 1.5px
+		background-color: #dedede
 		transition: all 0.3s
 		backface-visibility: hidden
 		border-radius: 2px
@@ -90,216 +97,317 @@ h3
 	&.on span:after 
 		transform: rotate(-45deg) translate(6px, -7px)
 
-.main-head
-	background-color: #000
-	color: #fff
-	display: block
-	z-index: 99
-	width: 100%
-	&__logo
-		margin: 60px 0 24px
-		img
-			width: 40px
-			height: 48px
-			margin-right: 20px
-		a
-			font-weight: bold
-			color: #fff
-			font-size: 28px
-			text-decoration: none
+.tickets
+	&-wrap
+		height: 600px
+		width: 100%
+		position: relative
+		&:before, &:after
+			content: ''
+			position: absolute
+			border: 1px solid rgba(255,255,255,.2)
+			border-radius: 50%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&:before
+			width: 520px
+			height: 520px
+		&:after
+			width: 850px
+			height: 850px
+		&>div
+			z-index: 1
+	&-enemy
+		position: absolute
+		width: 37%
+		height: 122px
+		background-color: #fff
+		&-inner
+			position: relative
+			width: 100%
+			height: 100%
+			box-shadow: 0 0 20px rgba(0,0,0,0.6)
 			display: flex
 			align-items: center
-	&__menu
-		display: flex
-		align-items: flex-end
-		height: 100%
-		ul
-			text-align: right
-			width: 100%
-			li
-				display: inline-block
-				margin: 0 14px 0 15px
-				a
-					font-size: 16px
-					color: #FFF
-					text-decoration: none
-					padding: 20px 0 36px
-					display: block
-					position: relative
-				&.active
-					a:after
-						content: ''
-						position: absolute
-						left: 0
-						bottom: 0
-						width: 100%
-						border-bottom: 5px solid #fff
-
-.s-approach
-	padding: 100px 0
-	background-color: #000
-	color: #fff
-	background-repeat: no-repeat
-	background-size: auto
-	background-position: 100%
-	&__desc
-		max-width: 592px
-		p
-			font-size: 18px
-			line-height: 27px
-			margin-top: 40px
-			strong
-				font-size: 20px
-		.line
-			border-top: 1px solid #fff
-			margin: 40px 0
-
-.s-result
-	padding: 80px 0
-	background-color: #eceef2
-	color: #000
-	&__text
-		max-width: 490px
-		float: right
-		p
-			font-size: 18px
-			line-height: 28.8px
-
-.s-steps
-	padding: 80px 0
-	&__text
-		font-size: 18px
-		line-height: 28.8px
-	&__item
-		margin-bottom: 30px
-		&:after
-			content: ''
-			display: table
-			clear: both
-		&--num
-			float: left
-			margin-right: 44px
-			width: 120px
-			height: 120px
-			position: relative
+			z-index: 2
+			span
+				font-weight: bold
+				width: 100%
+				font-size: 30px
+				&.fade-in
+					animation: fadeIn .25s
+					animation-fill-mode: both
 			&:after
 				content: ''
 				position: absolute
-				width: 100%
-				height: 100%
-				top: 0
-				left: 0
-				background-color: transparent
-				border: 1px solid #000
-				border-radius: 10em
-			strong
-				font-size: 80px
-				position: absolute
-				bottom: 0
-				right: 0
 				background-color: #fff
-				z-index: 1
-				line-height: 1
-		&--text
-			min-height: 130px
-			h3
-				margin-bottom: 16px
-			p
-				font-size: 18px
-				line-height: 28.8px
-
-.callback
-	border-radius: 8px
-	overflow: hidden
-	border: 1px solid #00b4f0
-	margin-top: 40px
-	&-text
-		background-color: #00b4f0
-		padding: 48px
-		color: #fff
-		height: 100%
-		p
-			font-size: 18px
-			line-height: 28.8px
-			strong
-				font-size: 28px
-				line-height: 44.8px
-				margin: 24px 0
-				display: block
-		&__arrow
+				height: 100%
+				border-radius: 10px
+				z-index: -1
+		&.first
+			left: 0
+			top: 29%
 			text-align: right
-			margin-top: 24px
-	&-form
-		padding: 48px
-		label
-			font-size: 16px
-			line-height: 24px
-			font-weight: 700
-			margin-bottom: 8px
-			span
-				margin-left: 8px
-				font-size: 14px
-				font-weight: normal
-		&__btn
-			margin-top: 44px
-		&__title
-			font-size: 28px
-			line-height: 42px
-			font-weight: bold
-			margin-bottom: 24px
-
-.btn
-	border: 1px solid transparent
-	outline: none
-	transition: all .25s ease
-
-.btn-form
-	font-weight: 700
-	cursor: pointer
-	width: 100%
-	padding: 12px 24px
-	border-radius: 6px
-	color: #fff
-	background-color: #0d870d
-	border-color: #0d870d
-	&:hover
-		background-color: darken(#0d870d, 5%)
-
-.main-foot
-	background-color: #000
-	padding: 80px 0
-	color: #fff
-	&__logo
-		img
-			width: 40px
-			height: 48px
-			margin-right: 20px
-		a
-			font-weight: bold
-			color: #fff
-			font-size: 28px
-			text-decoration: none
+			.tickets-enemy-inner:after
+				right: -45px
+				width: 144.34px
+				transform: skewX(-30deg)
+		&.second
+			top: 51%
+			right: 0
+			.tickets-enemy-inner:after
+				left: -45px
+				width: 144.34px
+				transform: skewX(-30deg)
+	&-list
+		height: 100%
+		position: relative
+	&-item
+		position: absolute
+		cursor: pointer
+		transition: all .35s ease
+		&.fade-in
+			animation: fadeInTicket .25s
+			animation-fill-mode: both
+		&.second, &.fourth
+			.hexagon
+				width: 150px
+				height: 86.60px
+				margin: 43.30px 0
+				&:before, &:after
+					width: 106.07px
+					height: 106.07px
+					left: 21.9670px
+				&:before
+					top: -49.033px
+				&:after
+					bottom: -49.033px
+				span
+					width: 150px
+					height: 86.6025px
+		&.first, &.fifth
+			.hexagon
+				width: 120px
+				height: 69.28px
+				margin: 34.64px 0
+				&:before, &:after
+					width: 84.85px
+					height: 84.85px
+					left: 17.5736px
+				&:before
+					top: -38.4264px
+				&:after
+					bottom: -39.4264px
+				span
+					width: 120px
+					height: 69.2820px
+		&.first
+			top: 3%
+			right: 16%
+			.tickets-item__text--date
+				font-size: 16px
+		&.second
+			top: 15%
+			right: 27%
+		&.active
+			cursor: auto
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			.tickets-item__text
+				margin: -22px 0
+				display: block
+				&--date
+					font-weight: bold
+					font-size: 30px
+					text-transform: none
+					span
+						display: inline-block
+				& > *
+					display: block
+				&--btn
+					display: inline-block
+		&.fourth
+			top: 54%
+			left: 27%
+		&.fifth
+			top: 71%
+			left: 16%
+			.tickets-item__text--date
+				font-size: 16px
+		&.hidden
+			display: none
+		&__hexagon
+			position: relative
+			width: 100%
+			height: 100%
+		&__text
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 9
+			color: #1e1e40
+			text-align: center
+			font-size: 18px
 			display: flex
 			align-items: center
-	&__menu
-		margin-top: 40px
-		ul
-			margin-left: -14px
-			li
-				display: inline-block
-				margin: 8px 14px 0
-				a
-					font-size: 16px
-					color: #FFF
-					text-decoration: none
+			justify-content: center
+			& > *
+				display: none
+			&--stadium
+				margin-bottom: 10px
+			&--date
+				font-size: 20px
+				line-height: 1.3
+				text-transform: uppercase
+				display: block
+				span
 					display: block
-					position: relative
-					opacity: .5
-					transition: all .25s ease
-					&:hover
-						opacity: 1
-	&__copy
-		opacity: .5
+			&--btn
+				margin-top: 20px
+				// display: inline-block
+				color: #1e1e40
+				border: 1px solid #1e1e40
+				border-radius: 5px
+				padding: 7px 12px
+				font-size: 16px
+				transition: all .25s ease
+				&:hover
+					text-decoration: none
+					color: #fff
+					background-color: #1e1e40
 
+.hexagon
+	position: relative
+	width: 250px
+	height: 144.34px
+	background-color: #fff
+	margin: 72.17px 0
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+	transform: rotate(30deg)
+	border-radius: 10px
+	&:before, &:after
+		content: ""
+		position: absolute
+		z-index: 1
+		width: 176.78px
+		height: 176.78px
+		-webkit-transform: scaleY(0.5774) rotate(-45deg)
+		-ms-transform: scaleY(0.5774) rotate(-45deg)
+		transform: scaleY(0.5774) rotate(-45deg)
+		background-color: inherit
+		left: 36.6117px
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+		border-radius: 10px
+	&:before
+		top: -84.3883px
+	&:after
+		bottom: -85.3883px
+	span
+		display: block
+		position: absolute
+		top: 0px
+		left: 0
+		width: 250px
+		height: 144.3376px
+		z-index: 2
+		background: inherit
+		border-radius: 10px
 
-@import "media" // Always at the end
+.hexagon-medium
+	position: relative
+	width: 150px
+	height: 86.60px
+	background-color: #fff
+	margin: 43.30px 0
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+	transform: rotate(30deg)
+	border-radius: 10px
+	&:before, &:after
+		content: ""
+		position: absolute
+		z-index: 1
+		width: 106.07px
+		height: 106.07px
+		transform: scaleY(0.5774) rotate(-45deg)
+		background-color: inherit
+		left: 21.9670px
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+		border-radius: 10px
+	&:before
+		top: -49.033px
+	&:after
+		bottom: -49.033px
+	span
+		display: block
+		position: absolute
+		top: 0px
+		left: 0
+		width: 150px
+		height: 86.6025px
+		z-index: 2
+		background: inherit
+		border-radius: 10px
+
+.hexagon-small
+	position: relative
+	width: 120px
+	height: 69.28px
+	background-color: #ffffff
+	margin: 34.64px 0
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+	transform: rotate(30deg)
+	border-radius: 10px
+	&:before, &:after
+		content: ""
+		position: absolute
+		z-index: 1
+		width: 84.85px
+		height: 84.85px
+		transform: scaleY(0.5774) rotate(-45deg)
+		background-color: inherit
+		left: 17.5736px
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+		border-radius: 10px
+	&:before
+		top: -38.4264px
+	&:after
+		bottom: -39.4264px
+	span
+		display: block
+		position: absolute
+		top: 0px
+		left: 0
+		width: 120px
+		height: 69.2820px
+		z-index: 2
+		background: inherit
+		border-radius: 10px
+
+@media (min-width: 1280px)
+	.tickets-wrap
+		&:before
+			width: 600px
+			height: 600px
+		&:after
+			width: 930px
+			height: 930px
+
+@keyframes fadeIn
+	from
+		// transform: scale(0.95)
+		opacity: 0
+	to
+		// transform: scale(1)
+		opacity: 1
+
+@keyframes fadeInTicket
+	from
+		// transform: scale(0.8) translate(-50%,-50%)
+		opacity: 0
+	to
+		// transform: scale(1) translate(-50%,-50%)
+		opacity: 1
