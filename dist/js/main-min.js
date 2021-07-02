@@ -1,4 +1,4 @@
-const api_url = 'http://91.203.194.44:9055/api/v1/',
+const api_url = 'https://91.203.194.44:9055/api/v1/',
     token = '98NBD76V43DMN5675',
     api_endpoints = {
         options: 'options.get.v1',
